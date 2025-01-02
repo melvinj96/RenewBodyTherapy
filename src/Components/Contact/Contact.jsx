@@ -13,15 +13,15 @@ function Contact() {
     notes: ''
   });
 
-  const mapCenter = {
-    lat: 52.1389, // Replace with your actual coordinates
-    lng: -0.4667
-  };
+  // const mapCenter = {
+  //   lat: 52.1389, // Replace with your actual coordinates
+  //   lng: -0.4667
+  // };
 
-  const mapStyles = {
-    height: "400px",
-    width: "100%"
-  };
+  // const mapStyles = {
+  //   height: "400px",
+  //   width: "100%"
+  // };
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
