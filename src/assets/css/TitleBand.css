@@ -1,0 +1,19 @@
+.title-band {
+  background-color: #E67E22;
+  padding: 2rem 0;
+  text-align: center;
+  width: 100%;
+}
+
+.title-band h1 {
+  color: #000000;
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.title-band .subtitle {
+  color: #000000;
+  margin: 0.5rem 0 0 0;
+  font-size: 1.1rem;
+}

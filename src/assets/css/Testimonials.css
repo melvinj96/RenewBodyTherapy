@@ -1,0 +1,154 @@
+ 
+  /* Quotes Section */
+  .testimonials-quotes {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .quotes-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .testimonial-card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  
+  .quote-mark {
+    font-size: 4rem;
+    color: #E67E22;
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    opacity: 0.3;
+  }
+  
+  .quote-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Google Reviews Section */
+  .google-reviews {
+    background-color: #E67E22;
+    padding: 3rem 0;
+    text-align: center;
+    color: white;
+  }
+  
+  .reviews-container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .google-link {
+    display: inline-block;
+    text-decoration: none;
+    margin-top: 1rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .google-link:hover {
+    transform: scale(1.05);
+  }
+  
+  .google-logo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .google-logo span {
+    display: inline-block;
+  }
+  
+  .g-letter { color: #4285F4; }
+  .o-letter { color: #EA4335; }
+  .o2-letter { color: #FBBC05; }
+  .g2-letter { color: #4285F4; }
+  .l-letter { color: #34A853; }
+  .e-letter { color: #EA4335; }
+  
+  .stars {
+    font-size: 1.5rem;
+    color: #FFD700;
+  }
+  
+  /* Video Testimonials Section */
+  .video-testimonials {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 2rem;
+  }
+  
+  .videos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .video-item {
+    position: relative;
+    cursor: pointer;
+    border-radius: 10px;
+    overflow: hidden;
+    aspect-ratio: 16/9;
+  }
+  
+  .video-thumbnail {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .play-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+  }
+  
+  .play-overlay i {
+    color: white;
+    font-size: 3rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .video-item:hover .play-overlay {
+    background: rgba(0, 0, 0, 0.5);
+  }
+  
+  .video-item:hover .play-overlay i {
+    transform: scale(1.1);
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .quotes-container {
+      grid-template-columns: 1fr;
+    }
+  
+    .google-logo {
+      font-size: 2rem;
+    }
+  
+    .videos-grid {
+      grid-template-columns: 1fr;
+    }
+  }
