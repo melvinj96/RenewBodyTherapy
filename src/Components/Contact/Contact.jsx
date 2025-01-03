@@ -41,7 +41,9 @@ function Contact() {
           },
         body: JSON.stringify(formData)
       });
-  
+
+      const data = await response.json();
+      
       if (response.ok) {
         alert('Thank you! I will get back to you soon.');
         setFormData({
@@ -56,7 +58,7 @@ function Contact() {
         throw new Error('Failed to send message');
       }
     } catch (error) {
-      alert('Sorry, there was an error sending your message. Please try again or contact me by phone.');
+        alert(`Sorry, there was an error: ${error.message}`);
       console.error('Error:', error);
     }
   };

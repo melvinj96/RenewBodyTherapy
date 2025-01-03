@@ -7,25 +7,30 @@ exports.handler = async (event) => {
   }
 
   try {
+    // Log environment variables (remove in production)
+    console.log('Email User exists:', !!process.env.EMAIL_USER);
+    console.log('Email Password exists:', !!process.env.EMAIL_APP_PASSWORD);
+
     const { name, email, phone, service, date, notes } = JSON.parse(event.body);
 
+    // Create transporter with debug logging
     const transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_APP_PASSWORD
-      }
+      },
+      debug: true, // Enable debug logging
+      logger: true // Enable logger
     });
 
-    if (!process.env.EMAIL_USER || !process.env.EMAIL_APP_PASSWORD) {
-      throw new Error('Missing email configuration');
-    }
-
-    const emailList = [process.env.EMAIL_USER]; // Send to your email
+    // Verify transporter
+    await transporter.verify();
+    console.log('Transporter verified successfully');
 
     const mailOptions = {
       from: process.env.EMAIL_USER,
-      to: emailList.join(','),
+      to: process.env.EMAIL_USER,
       subject: 'New Appointment Request',
       html: `
         <h2>New Appointment Request</h2>
@@ -38,17 +43,22 @@ exports.handler = async (event) => {
       `
     };
 
-    await transporter.sendMail(mailOptions);
+    const info = await transporter.sendMail(mailOptions);
+    console.log('Email sent successfully:', info.response);
 
     return {
       statusCode: 200,
       body: JSON.stringify({ message: 'Email sent successfully' })
     };
   } catch (error) {
-    console.error('Error sending email:', error);
+    console.error('Detailed error:', error);
     return {
       statusCode: 500,
-      body: JSON.stringify({ message: 'Failed to send email' })
+      body: JSON.stringify({ 
+        message: 'Failed to send email',
+        error: error.message,
+        stack: error.stack
+      })
     };
   }
 };
