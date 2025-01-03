@@ -42,8 +42,6 @@ function Contact() {
         body: JSON.stringify(formData)
       });
 
-      const data = await response.json();
-      
       if (response.ok) {
         alert('Thank you! I will get back to you soon.');
         setFormData({
