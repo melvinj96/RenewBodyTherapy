@@ -53,13 +53,13 @@ const Navbar = () => {
           </div>
 
           <div className="social-media">
-            <a href="https://instagram.com/your-handle" target="_blank" rel="noopener noreferrer">
+            <a href="https://instagram.com/renewtherapies_" target="_blank" rel="noopener noreferrer">
               <FaInstagram />
             </a>
-            <a href="https://facebook.com/your-page" target="_blank" rel="noopener noreferrer">
+            <a href="https://facebook.com/renewbodytherapies" target="_blank" rel="noopener noreferrer">
               <FaFacebook />
             </a>
-            <a href="https://tiktok.com/@your-handle" target="_blank" rel="noopener noreferrer">
+            <a href="https://tiktok.com/@renewbodytherapy_" target="_blank" rel="noopener noreferrer">
               <FaTiktok />
             </a>
           </div>

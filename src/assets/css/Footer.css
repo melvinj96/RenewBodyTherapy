@@ -51,6 +51,15 @@
   .agency-link:hover {
     color: white;
   }
+
+  .contact-button {
+    background-color: #e67e22;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
   
   /* Make sure the footer stays at the bottom */
   #root {

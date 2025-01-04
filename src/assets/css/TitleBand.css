@@ -8,12 +8,13 @@
 .title-band h1 {
   color: #000000;
   margin: 0;
+  font-family: 'Oswald', sans-serif;
   font-size: 2.5rem;
   font-weight: bold;
 }
 
 .title-band .subtitle {
-  color: #000000;
+  color: white;
   margin: 0.5rem 0 0 0;
   font-size: 1.1rem;
 }

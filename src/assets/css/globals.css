@@ -1,0 +1,75 @@
+:root {
+    /* Font families */
+    --font-primary: 'Montserrat', sans-serif;
+    --font-secondary: 'Libre Franklin', serif;
+    --font-tertiary: 'Oswald', sans-serif;
+  
+    /* Font weights */
+    --fw-light: 300;
+    --fw-regular: 400;
+    --fw-medium: 500;
+    --fw-semibold: 600;
+    --fw-bold: 700;
+  
+    /* Font sizes */
+    --fs-small: 0.875rem;    /* 14px */
+    --fs-base: 1rem;         /* 16px */
+    --fs-medium: 1.125rem;   /* 18px */
+    --fs-large: 1.25rem;     /* 20px */
+    --fs-xl: 1.5rem;         /* 24px */
+    --fs-2xl: 2rem;          /* 32px */
+    --fs-3xl: 2.5rem;        /* 40px */
+  }
+  
+  /* Global styles */
+  body {
+    font-family: var(--font-primary);
+    font-weight: var(--fw-regular);
+    line-height: 1.5;
+    color: #333;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-secondary);
+    font-weight: var(--fw-semibold);
+    line-height: 1.2;
+  }
+  
+  /* Typography classes */
+  .text-display {
+    font-family: var(--font-secondary);
+    font-size: var(--fs-3xl);
+    font-weight: var(--fw-bold);
+  }
+  
+  .text-heading {
+    font-family: var(--font-secondary);
+    font-size: var(--fs-2xl);
+    font-weight: var(--fw-semibold);
+  }
+  
+  .text-subheading {
+    font-family: var(--font-primary);
+    font-size: var(--fs-xl);
+    font-weight: var(--fw-medium);
+  }
+  
+  .text-body {
+    font-family: var(--font-primary);
+    font-size: var(--fs-base);
+  }
+  
+  .text-small {
+    font-size: var(--fs-small);
+  }
+  
+  /* Additional utility classes */
+  .font-secondary {
+    font-family: var(--font-secondary);
+  }
+  
+  .fw-light { font-weight: var(--fw-light); }
+  .fw-regular { font-weight: var(--fw-regular); }
+  .fw-medium { font-weight: var(--fw-medium); }
+  .fw-semibold { font-weight: var(--fw-semibold); }
+  .fw-bold { font-weight: var(--fw-bold); }

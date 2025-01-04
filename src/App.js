@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import './assets/css/globals.css';
 import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
 import Home from './Components/Home/Home';
@@ -22,7 +23,6 @@ function App() {
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/contact" element={<Contact />} />
-          {/* Add more routes as needed */}
         </Routes>
         <Footer />
       </div>

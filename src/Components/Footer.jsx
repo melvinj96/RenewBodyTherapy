@@ -13,7 +13,9 @@ const Footer = () => {
         </div>
         
         <div className="footer-contact">
-          <a href="mailto:jikkyjoseph07@yahoo.co.uk">jikkujoseph07@yahoo.co.uk</a>
+          <button onClick={() => window.location.href='/contact'} className="contact-button">
+            Contact Us
+          </button>
         </div>
 
         <div className="footer-copyright">
@@ -24,7 +26,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               className="agency-link"
             >
-              Bedford Digital Agency
+              Digital Apex
             </a>
           </p>
         </div>

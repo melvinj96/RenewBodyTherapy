@@ -1,7 +1,7 @@
 .hero {
     height: 100vh;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url('../../assets/images/massage-table.jpg'); /* Add your background image */
+      url('../../assets/images/massage_table.jpeg'); /* Add your background image */
     background-size: cover;
     background-position: center;
     display: flex;
@@ -17,9 +17,11 @@
   }
   
   .hero-content h1 {
-    font-size: 4rem;
+    font-size: 5rem;
     color: #e67e22;
     margin-bottom: 2rem;
+    font-family: var(--font-tertiary);
+    text-shadow: rgba(0, 0, 0, 0.4) 0px 4px 5px;
   }
   
   .specialties {
@@ -29,6 +31,7 @@
   .specialists {
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
+    text-decoration: underline;
   }
   
   .specialties h2 {
@@ -44,9 +47,9 @@
     font-size: 1.5rem;
   }
   
-  .relax { color: #4CAF50; }
-  .renew { color: #e67e22; }
-  .revive { color: #2196F3; }
+  .relax { color: #4CAF50; font-weight: bold; }
+  .renew { color: white; font-weight: bold; }
+  .revive { color: #2196F3; font-weight: bold; }
   
   .cta-button {
     display: inline-block;
@@ -61,3 +64,32 @@
   .cta-button:hover {
     background-color: #d35400;
   }
+
+  .award-badge {
+    margin-top: 2rem;
+    text-align: center;
+  }
+  
+  .award-image {
+    max-width: 150px;
+    height: auto;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+    transition: transform 0.3s ease;
+  }
+  
+  .award-image:hover {
+    transform: scale(1.05);
+  }
+
+  /* Add media queries for h1 */
+@media screen and (max-width: 768px) {
+  .hero-content h1 {
+      font-size: 3.5rem;
+  }
+  .specialties h2 {
+    font-size: 1.5rem;
+  }
+  .specialists{
+    font-size: 1rem;
+  }
+}

@@ -13,6 +13,7 @@ import fallsInterventionImg from '../../assets/images/services/falls-interventio
 import postHospitalImg from '../../assets/images/services/post-hospital.jpg';
 import respiratoryRehabImg from '../../assets/images/services/respiratory-rehab.jpg';
 import physioImg from '../../assets/images/services/physio.jpg';
+import vitaminB12Img from '../../assets/images/services/vitamin-b12.jpg';
 
 function Services() {
   const [selectedService, setSelectedService] = useState(null);
@@ -249,6 +250,14 @@ function Services() {
 
         <p>Overall, mobile physiotherapy can make physiotherapy more accessible and comfortable for individuals who might otherwise struggle to receive the care they need. If you're considering mobile physiotherapy, it's advisable to check the qualifications and experience of the physiotherapist, as well as the specific services they provide.</p>
       `
+    },
+    {
+        title: "VITAMIN B12 INJECTIONS",
+        image: vitaminB12Img,
+        prices: [
+            "£25"
+        ],
+        description: "Vitamin B12 is a water-soluble vitamin that plays a crucial role in the body's metabolism and energy production. It is essential for the formation of red blood cells, the maintenance of the nervous system, and the synthesis of DNA. Vitamin B12 is also important for the proper functioning of the immune system and the production of certain hormones."
     }
 ];
 
@@ -268,7 +277,7 @@ function Services() {
     <div>
       <TitleBand 
         title="Services" 
-        subtitle="All services can be conducted at my bases in Dudley/Bedford. I am also available for mobile service and can come directly to you." 
+        subtitle="All services can be conducted at my base in Dudley. I am also available for mobile service and can come directly to you." 
         />
       <div className="services-container">
         <div className="services-grid">

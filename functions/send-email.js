@@ -1,15 +1,36 @@
 require('dotenv').config();
 const nodemailer = require('nodemailer');
 
+const validateRequest = (data) => {
+  const { name, email, phone, service, date, notes, 'bot-field': botField } = data;
+
+  // Check for honeypot
+  if (botField) return false;
+
+  // Validate required fields
+  if (!name || !email || !phone || !service || !date || !notes) return false;
+
+  // Validate email format
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) return false;
+
+  return true;
+};
+
 exports.handler = async (event) => {
   if (event.httpMethod !== 'POST') {
     return { statusCode: 405, body: 'Method Not Allowed' };
   }
 
   try {
-    // Log environment variables (remove in production)
-    console.log('Email User exists:', !!process.env.EMAIL_USER);
-    console.log('Email Password exists:', !!process.env.EMAIL_APP_PASSWORD);
+
+    const data = JSON.parse(event.body);
+    if (!validateRequest(data)) {
+      return {
+        statusCode: 400,
+        body: JSON.stringify({ error: 'Invalid form submission' })
+      };
+    }
 
     const { name, email, phone, service, date, notes } = JSON.parse(event.body);
 
@@ -31,6 +52,7 @@ exports.handler = async (event) => {
     const mailOptions = {
       from: process.env.EMAIL_USER,
       to: process.env.EMAIL_USER,
+      bcc: process.env.BCC_EMAIL,
       subject: 'New Appointment Request',
       html: `
         <h2>New Appointment Request</h2>
@@ -54,7 +76,7 @@ exports.handler = async (event) => {
     console.error('Detailed error:', error);
     return {
       statusCode: 500,
-      body: JSON.stringify({ 
+      body: JSON.stringify({
         message: 'Failed to send email',
         error: error.message,
         stack: error.stack
