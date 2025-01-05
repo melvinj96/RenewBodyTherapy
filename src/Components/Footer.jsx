@@ -1,5 +1,5 @@
 import React from 'react';
-//import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import '../assets/css/Footer.css';
 
 const Footer = () => {
@@ -13,9 +13,9 @@ const Footer = () => {
         </div>
         
         <div className="footer-contact">
-          <button onClick={() => window.location.href='/contact'} className="contact-button">
+          <Link to="/contact" className="cta-button">
             Contact Us
-          </button>
+          </Link>
         </div>
 
         <div className="footer-copyright">

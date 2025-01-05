@@ -9,10 +9,11 @@ import Services from './Components/Services/Services';
 import Gallery from './Components/Gallery/Gallery';
 import Testimonials from './Components/Testimonials/Testimonials';
 import Contact from './Components/Contact/Contact';
-
+import ScrollToTop from './Components/Shared/ScrollToTop';
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="App">
         <Navbar />
         <Routes>
