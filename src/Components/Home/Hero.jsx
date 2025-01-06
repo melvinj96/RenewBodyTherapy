@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../../assets/css/Hero.css';
 import awardImage from '../../assets/images/threebest-award-2024.png';
+import awardImage2 from '../../assets/images/prestige_award.png';
 
 const Hero = () => {
   return (
@@ -27,6 +28,11 @@ const Hero = () => {
             src={awardImage} 
             alt="Three Best Rated Excellence Award 2024" 
             className="award-image"
+          />
+          <img 
+            src={awardImage2} 
+            alt="Massage Therapy Practitioner Award 2024" 
+            className="award-image rounded-award"
           />
         </div>
       </div>

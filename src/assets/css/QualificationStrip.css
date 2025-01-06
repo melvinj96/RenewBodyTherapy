@@ -17,12 +17,7 @@
   .qualification-container img {
     max-height: 80px;
     width: auto;
-    filter: grayscale(100%);
     transition: filter 0.3s ease;
-  }
-  
-  .qualification-container img:hover {
-    filter: grayscale(0%);
   }
   
   @media (max-width: 768px) {
