@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import TitleBand from '../Titleband';
 import Alert from '../Shared/Alert';
 import LoadingSpinner from '../Shared/LoadingSpinner';
@@ -31,6 +31,17 @@ function Contact() {
     const [alert, setAlert] = useState({ show: false, message: '', type: 'info' });
 
     const [isLoading, setIsLoading] = useState(false);
+
+    useEffect(() => {
+        const params = new URLSearchParams(window.location.search);
+        const service = params.get('service');
+        if (service) {
+            setFormData(prevState => ({
+                ...prevState,
+                service: service
+            }));
+        }
+    }, []);
 
     const handleCaptchaChange = (value) => {
         setCaptchaValue(value);
@@ -185,6 +196,7 @@ function Contact() {
                                         <option value="post-hospital-rehab">Post Hospital Discharge Rehabilitation</option>
                                         <option value="respiratory-rehab">Respiratory/Long COVID Rehabilitation</option>
                                         <option value="physio">Mobile Physiotherapy</option>
+                                        <option value="occupational">Occupational Therapy</option>
                                         <option value="vitamin-b12">Vitamin B12 Injections</option>
                                     </select>
                                 </div>

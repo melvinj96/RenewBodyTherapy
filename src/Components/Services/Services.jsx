@@ -14,6 +14,7 @@ import postHospitalImg from '../../assets/images/services/post-hospital.jpg';
 import respiratoryRehabImg from '../../assets/images/services/respiratory-rehab.jpg';
 import physioImg from '../../assets/images/services/physio.jpg';
 import vitaminB12Img from '../../assets/images/services/vitamin-b12.jpg';
+import occupationalImg from '../../assets/images/services/occupational.jpg';
 
 function Services() {
   const [selectedService, setSelectedService] = useState(null);
@@ -24,26 +25,25 @@ function Services() {
       title: "DEEP TISSUE MASSAGE",
       image: deepTissueImg,
       prices: [
-        "Full Body (60 mins) - £40",
-        "Half Body (30 mins) - £30"
+        "Full Body (60 mins) - £45"
       ],
-      description: "Deep tissue massage is a therapeutic massage technique that focuses on the deeper layers of muscle and connective tissue in the body. It uses slower strokes and more intense pressure to target specific areas of tension or pain. This type of massage is particularly beneficial for individuals with chronic pain, muscle stiffness, or injuries."
+      description: "Deep tissue massage is a therapeutic massage technique that focuses on the deeper layers of muscle and connective tissue in the body. It uses slower strokes and more intense pressure to target specific areas of tension or pain. This type of massage is particularly beneficial for individuals with chronic pain, muscle stiffness, or injuries.",
+      selectValue: "deep-tissue"
     },
     {
       title: "SWEDISH MASSAGE",
       image: swedishImg,
       prices: [
-        "Full Body (60 mins) - £40",
-        "Half Body (30 mins) - £30"
+        "Full Body (60 mins) - £40"
       ],
-      description: "Swedish massage is typically performed on the skin with the use of oils or lotions, and it can vary in pressure from light to deep depending on the client's preference. This type of massage is known for its ability to decrease stress, improve circulation, relieve muscle tension, and enhance flexibility. It's often recommended for those seeking relaxation and relief from everyday stress and tension."
+      description: "Swedish massage is typically performed on the skin with the use of oils or lotions, and it can vary in pressure from light to deep depending on the client's preference. This type of massage is known for its ability to decrease stress, improve circulation, relieve muscle tension, and enhance flexibility. It's often recommended for those seeking relaxation and relief from everyday stress and tension.",
+      selectValue: "swedish"
     },
     {
       title: "SPORTS MASSAGE",
       image: sportsImg,
       prices: [
         "60 mins - £45",
-        "30 mins - £35",
         "Additional Service - Cupping - £5"
       ],
       description: `
@@ -70,7 +70,8 @@ function Services() {
             </ul>
 
             <p><strong>Who Can Benefit:</strong> While it is primarily designed for athletes, anyone who engages in physical activity can benefit from sports massage, including weekend warriors, fitness enthusiasts, and individuals with physically demanding jobs.</p>
-        `
+        `,
+      selectValue: "sports"
     },
     {
       title: "HEAD, NECK & SHOULDER MASSAGE",
@@ -78,14 +79,14 @@ function Services() {
       prices: [
         "30 mins - £30"
       ],
-      description: "This focused massage targets common areas of tension in the upper body. Perfect for those who experience headaches, neck pain, or shoulder stiffness, particularly from desk work or stress. Helps improve circulation and reduce tension in these vital areas."
+      description: "This focused massage targets common areas of tension in the upper body. Perfect for those who experience headaches, neck pain, or shoulder stiffness, particularly from desk work or stress. Helps improve circulation and reduce tension in these vital areas.",
+      selectValue: "head-massage"
     },
     {
       title: "STROKE REHABILITATION",
       image: strokeRehabImg,
       prices: [
-        "Initial Assessment - £45",
-        "Follow-up Sessions - £40"
+        "60 mins - £70"
       ],
       description: `
         <p>A therapist can play a crucial role in the recovery process following a stroke. Different types of therapists may be involved, each addressing various aspects of rehabilitation. Here are some key ways therapists can help:</p>
@@ -104,14 +105,14 @@ function Services() {
         <li>Home Modifications: They can recommend changes to the home environment to ensure safety and accessibility.</li>
         </ul>
       
-      `
+      `,
+      selectValue: "stroke-rehab"
     },
     {
       title: "FALLS INTERVENTION",
       image: fallsInterventionImg,
       prices: [
-        "Assessment - £45",
-        "Follow-up Sessions - £40"
+        "60 mins - £70"
       ],
       description: `
         <p>A therapist, particularly a physical therapist or an occupational therapist, can help individuals who are at risk of falling at home in several ways:</p>
@@ -152,14 +153,14 @@ function Services() {
         </ul>
 
         <p>By implementing these strategies, therapists can significantly reduce the risk of falls and help individuals maintain their independence and safety at home.</p>
-      `
+      `,
+      selectValue: "falls-intervention"
     },
     {
       title: "POST HOSPITAL DISCHARGE REHABILITATION",
       image: postHospitalImg,
       prices: [
-        "Initial Assessment - £45",
-        "Follow-up Sessions - £40"
+        "60 mins - £70"
       ],
       description: `
         <p>Rehabilitation at home can be an essential aspect of recovery following a long hospital stay. Here are several ways it can help:</p>
@@ -187,14 +188,14 @@ function Services() {
         </ul>
 
         <p>It's essential to have a well-structured rehabilitation plan in place and to work closely with healthcare providers to ensure that home care is set up effectively, with appropriate equipment and support systems.</p>
-      `
+      `,
+      selectValue: "post-hospital-rehab"
     },
     {
       title: "RESPIRATORY/LONG COVID REHABILITATION",
       image: respiratoryRehabImg,
       prices: [
-        "Initial Assessment - £45",
-        "Follow-up Sessions - £40"
+        "60 mins - £70"
       ],
       description: `
         <p>Respiratory and long COVID rehabilitation can offer several benefits for individuals recovering from COVID-19, especially those who experience lingering symptoms or respiratory issues. Here are some ways in which rehab can help:</p>
@@ -218,14 +219,14 @@ function Services() {
         </ul>
 
         <p>If you or someone you know is considering respiratory or long COVID rehabilitation, it's important to consult with healthcare professionals who can tailor a program to meet individual needs and circumstances.</p>
-      `
+      `,
+      selectValue: "respiratory-rehab"
     },
     {
       title: "MOBILE PHYSIOTHERAPY",
       image: physioImg,
       prices: [
-        "Initial Assessment - £45",
-        "Follow-up Sessions - £40"
+        "60 mins - £70"
       ],
       description: `
         <p>Mobile physiotherapy refers to a service where physiotherapists provide assessment, treatment, and rehabilitation for patients in their own homes or other convenient locations, rather than requiring them to travel to a clinic. This approach offers several advantages, particularly for individuals who may have mobility issues, chronic pain, or other health conditions that make it difficult to attend traditional physiotherapy sessions. Here are some key features and benefits of mobile physiotherapy:</p>
@@ -249,7 +250,33 @@ function Services() {
         </ul>
 
         <p>Overall, mobile physiotherapy can make physiotherapy more accessible and comfortable for individuals who might otherwise struggle to receive the care they need. If you're considering mobile physiotherapy, it's advisable to check the qualifications and experience of the physiotherapist, as well as the specific services they provide.</p>
-      `
+      `,
+      selectValue: "physio"
+    },
+    {
+      title: "OCCUPATIONAL THERAPY",
+      image: occupationalImg,
+      prices: [
+          "60 mins - £65"
+      ],
+      description: `
+        <p>Occupational therapy is a holistic and client-centered health profession that focuses on enabling individuals to participate in meaningful activities of daily life. It is designed to help people of all ages achieve independence and improve their quality of life by addressing physical, cognitive, emotional, and social needs. Occupational therapists work collaboratively with clients to develop personalized strategies that enhance their ability to perform everyday tasks and engage in activities that are important to them.</p>
+
+        <p>Key aspects of occupational therapy include:</p>
+        <ul>
+          <li><strong>Assessment and Evaluation:</strong> Occupational therapists assess a client's physical, cognitive, and emotional abilities, as well as their environment, to identify barriers to participation in daily activities.</li>
+          <li><strong>Personalized Intervention Plans:</strong> Therapists create customized intervention plans that focus on improving skills, adapting tasks, and modifying environments to support the client's goals.</li>
+          <li><strong>Skill Development:</strong> Therapy may involve exercises and activities to improve fine motor skills, hand-eye coordination, cognitive processing, and problem-solving abilities.</li>
+          <li><strong>Adaptive Techniques and Equipment:</strong> Occupational therapists may recommend adaptive techniques or assistive devices to help clients perform tasks more easily and safely.</li>
+          <li><strong>Environmental Modifications:</strong> Therapists can suggest changes to the home or workplace to enhance accessibility and safety, such as installing grab bars or rearranging furniture.</li>
+          <li><strong>Education and Support:</strong> Clients and their families receive education and support to understand the therapeutic process and how to implement strategies in daily life.</li>
+          <li><strong>Holistic Approach:</strong> Occupational therapy considers the whole person, including their physical, emotional, and social well-being, to promote overall health and wellness.</li>
+          <li><strong>Collaboration with Other Professionals:</strong> Occupational therapists often work as part of a multidisciplinary team, collaborating with doctors, physical therapists, speech therapists, and other healthcare providers to ensure comprehensive care.</li>
+        </ul>
+
+        <p>Occupational therapy is beneficial for individuals recovering from injury, living with disabilities, or experiencing challenges related to aging, mental health, or chronic conditions. By focusing on meaningful activities, occupational therapy empowers individuals to lead fulfilling and independent lives.</p>
+      `,
+      selectValue: "occupational"
     },
     {
         title: "VITAMIN B12 INJECTIONS",
@@ -257,12 +284,14 @@ function Services() {
         prices: [
             "£25"
         ],
-        description: "Vitamin B12 is a water-soluble vitamin that plays a crucial role in the body's metabolism and energy production. It is essential for the formation of red blood cells, the maintenance of the nervous system, and the synthesis of DNA. Vitamin B12 is also important for the proper functioning of the immune system and the production of certain hormones."
+        description: "Vitamin B12 is a water-soluble vitamin that plays a crucial role in the body's metabolism and energy production. It is essential for the formation of red blood cells, the maintenance of the nervous system, and the synthesis of DNA. Vitamin B12 is also important for the proper functioning of the immune system and the production of certain hormones.",
+        selectValue: "vitamin-b12"
     }
 ];
 
-  const handleBook = () => {
-    navigate('/contact');
+  const handleBook = (service) => {
+    console.log(service);
+    navigate(`/contact?service=${encodeURIComponent(service.selectValue)}`);
   };
 
   const handleReadMore = (service) => {
@@ -285,7 +314,7 @@ function Services() {
             <ServiceCard
               key={index}
               service={service}
-              onBook={handleBook}
+              onBook={() => handleBook(service)}
               onReadMore={() => handleReadMore(service)}
             />
           ))}
