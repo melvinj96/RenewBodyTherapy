@@ -15,6 +15,7 @@ import respiratoryRehabImg from '../../assets/images/services/respiratory-rehab.
 import physioImg from '../../assets/images/services/physio.jpg';
 import vitaminB12Img from '../../assets/images/services/vitamin-b12.jpg';
 import occupationalImg from '../../assets/images/services/occupational.jpg';
+import acupunctureImg from '../../assets/images/services/acupuncture.jpg';
 
 function Services() {
   const [selectedService, setSelectedService] = useState(null);
@@ -25,7 +26,8 @@ function Services() {
       title: "DEEP TISSUE MASSAGE",
       image: deepTissueImg,
       prices: [
-        "Full Body (60 mins) - £45"
+        "Full Body (60 mins) - £45",
+        "Additional Service - Accupuncture  - £15"
       ],
       description: "Deep tissue massage is a therapeutic massage technique that focuses on the deeper layers of muscle and connective tissue in the body. It uses slower strokes and more intense pressure to target specific areas of tension or pain. This type of massage is particularly beneficial for individuals with chronic pain, muscle stiffness, or injuries.",
       selectValue: "deep-tissue"
@@ -44,7 +46,8 @@ function Services() {
       image: sportsImg,
       prices: [
         "60 mins - £45",
-        "Additional Service - Cupping - £5"
+        "Additional Service - Cupping - £5",
+        "Additional Service - Accupuncture  - £15"
       ],
       description: `
             <p>Sports massage is a specialized form of massage therapy designed to enhance athletic performance and recovery. It focuses on the needs of athletes and physically active individuals, helping to prepare their bodies for optimal performance, aid in recovery, and prevent injuries. Here are some key aspects of sports massage:</p>
@@ -286,6 +289,28 @@ function Services() {
         ],
         description: "Vitamin B12 is a water-soluble vitamin that plays a crucial role in the body's metabolism and energy production. It is essential for the formation of red blood cells, the maintenance of the nervous system, and the synthesis of DNA. Vitamin B12 is also important for the proper functioning of the immune system and the production of certain hormones.",
         selectValue: "vitamin-b12"
+    },
+    {
+      title: "ACUPUNCTURE",
+      image: acupunctureImg,
+      prices: [
+        "£45"
+      ],
+      description: `
+        <p>Acupuncture, also referred to as Dry Needling, is a technique used to help manage pain and inflammation by inserting fine, sterile needles into specific areas of the body. This modern adaptation of traditional Chinese acupuncture integrates current knowledge of anatomy and physiology to effectively treat a wide range of musculoskeletal conditions.</p>
+
+        <p>It is most commonly used to address issues such as headaches, muscle tightness, trapped nerves like sciatica, trigger points, and various other musculoskeletal injuries.</p>
+
+        <h3>Benefits</h3>
+        <ul>
+          <li><strong>Pain Relief:</strong> Effective for chronic pain such as back pain, osteoarthritis, migraines, and sciatica by stimulating endorphin release.</li>
+          <li><strong>Stress Reduction:</strong> Promotes relaxation and balances energy flow, helping to relieve stress.</li>
+          <li><strong>Better Sleep:</strong> May improve sleep quality and help manage insomnia.</li>
+          <li><strong>Digestive Support:</strong> Helps with conditions like IBS, acid reflux, and nausea.</li>
+          <li><strong>Emotional Well-Being:</strong> Can reduce symptoms of anxiety, depression, and emotional stress.</li>
+        </ul>
+      `,
+      selectValue: "acupuncture"
     }
 ];
 

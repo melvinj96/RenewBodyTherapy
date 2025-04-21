@@ -11,14 +11,14 @@ const Hero = () => {
         <h1>RENEW BODY THERAPY</h1>
         <div className="specialties">
           <p className="specialists">Specialists in</p>
-          <h2>Massage Therapy</h2>
-          <h2>Occupational Therapy</h2>
-          <h2>Physiotherapy</h2>
+          <h2>MASSAGE THERAPY</h2>
+          <h2>OCCUPATIONAL THERAPY</h2>
+          <h2>PHYSIOTHERAPY</h2>
         </div>
         <div className="tagline">
-          <span className="relax">Relax</span>
-          <span className="renew">Renew</span>
-          <span className="revive">Revive</span>
+          <span className="relax">RELAX</span>
+          <span className="renew">RENEW</span>
+          <span className="revive">REVIVE</span>
         </div>
         <Link to="/services" className="cta-button">
           View Services
