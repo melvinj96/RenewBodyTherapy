@@ -4,7 +4,7 @@ function Awards() {
   // Example awards data; replace or extend as needed
   const awards = [
     {
-      title: "Best Massage Therapy Practitioner 2024",
+      title: "West Midlands Massage Therapy Practitioner of the Year",
       organization: "Prestige Awards",
       year: 2024,
       description: "Recognized for outstanding client care and innovative therapy solutions.",
