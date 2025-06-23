@@ -4,18 +4,6 @@ import TitleBand from '../Titleband';
 import ServiceCard from './ServiceCard';
 import ServiceModal from './ServiceModal';
 import '../../assets/css/Services.css';
-import deepTissueImg from '../../assets/images/services/deep-tissue.jpg';
-import swedishImg from '../../assets/images/services/swedish.jpg';
-import sportsImg from '../../assets/images/services/sports.jpg';
-import headMassageImg from '../../assets/images/services/head-massage.jpg';
-import strokeRehabImg from '../../assets/images/services/stroke-rehab.jpg';
-import fallsInterventionImg from '../../assets/images/services/falls-intervention.jpg';
-import postHospitalImg from '../../assets/images/services/post-hospital.jpg';
-import respiratoryRehabImg from '../../assets/images/services/respiratory-rehab.jpg';
-import physioImg from '../../assets/images/services/physio.jpg';
-import vitaminB12Img from '../../assets/images/services/vitamin-b12.jpg';
-import occupationalImg from '../../assets/images/services/occupational.jpg';
-import acupunctureImg from '../../assets/images/services/acupuncture.jpg';
 
 function Services() {
   const [selectedService, setSelectedService] = useState(null);
@@ -24,7 +12,7 @@ function Services() {
   const services = [
     {
       title: "DEEP TISSUE MASSAGE",
-      image: deepTissueImg,
+      image: 'https://res.cloudinary.com/diydpxavd/image/upload/v1749591748/deep-tissue_qza6dp.jpg',
       prices: [
         "Full Body (60 mins) - £45",
         "Additional Service - Accupuncture  - £15"
@@ -34,7 +22,7 @@ function Services() {
     },
     {
       title: "SWEDISH MASSAGE",
-      image: swedishImg,
+      image: 'https://res.cloudinary.com/diydpxavd/image/upload/v1749591763/swedish_nqcbj4.jpg',
       prices: [
         "Full Body (60 mins) - £40"
       ],
@@ -43,7 +31,7 @@ function Services() {
     },
     {
       title: "SPORTS MASSAGE",
-      image: sportsImg,
+      image: 'https://res.cloudinary.com/diydpxavd/image/upload/v1749591760/sports_nrw9bm.jpg',
       prices: [
         "60 mins - £45",
         "Additional Service - Cupping - £5",
@@ -78,7 +66,7 @@ function Services() {
     },
     {
       title: "HEAD, NECK & SHOULDER MASSAGE",
-      image: headMassageImg,
+      image: 'https://res.cloudinary.com/diydpxavd/image/upload/v1749591751/head-massage_o80uw5.jpg',
       prices: [
         "30 mins - £30"
       ],
@@ -87,7 +75,7 @@ function Services() {
     },
     {
       title: "STROKE REHABILITATION",
-      image: strokeRehabImg,
+      image: 'https://res.cloudinary.com/diydpxavd/image/upload/v1749591762/stroke-rehab_vr4xvi.jpg',
       prices: [
         "60 mins - £70"
       ],
@@ -113,7 +101,7 @@ function Services() {
     },
     {
       title: "FALLS INTERVENTION",
-      image: fallsInterventionImg,
+      image: 'https://res.cloudinary.com/diydpxavd/image/upload/v1749591750/falls-intervention_itquxi.jpg',
       prices: [
         "60 mins - £70"
       ],
@@ -161,7 +149,7 @@ function Services() {
     },
     {
       title: "POST HOSPITAL DISCHARGE REHABILITATION",
-      image: postHospitalImg,
+      image: 'https://res.cloudinary.com/diydpxavd/image/upload/v1749591756/post-hospital_petri9.jpg',
       prices: [
         "60 mins - £70"
       ],
@@ -196,7 +184,7 @@ function Services() {
     },
     {
       title: "RESPIRATORY/LONG COVID REHABILITATION",
-      image: respiratoryRehabImg,
+      image: 'https://res.cloudinary.com/diydpxavd/image/upload/v1749591758/respiratory-rehab_mzccnt.jpg',
       prices: [
         "60 mins - £70"
       ],
@@ -227,7 +215,7 @@ function Services() {
     },
     {
       title: "MOBILE PHYSIOTHERAPY",
-      image: physioImg,
+      image: 'https://res.cloudinary.com/diydpxavd/image/upload/v1749591755/physio_w866c0.jpg',
       prices: [
         "60 mins - £70"
       ],
@@ -258,7 +246,7 @@ function Services() {
     },
     {
       title: "OCCUPATIONAL THERAPY",
-      image: occupationalImg,
+      image: 'https://res.cloudinary.com/diydpxavd/image/upload/v1749591753/occupational_ghxf7i.jpg',
       prices: [
           "60 mins - £65"
       ],
@@ -283,7 +271,7 @@ function Services() {
     },
     {
         title: "VITAMIN B12 INJECTIONS",
-        image: vitaminB12Img,
+        image: 'https://res.cloudinary.com/diydpxavd/image/upload/v1749591765/vitamin-b12_njshpz.jpg',
         prices: [
             "£25"
         ],
@@ -292,7 +280,7 @@ function Services() {
     },
     {
       title: "ACUPUNCTURE",
-      image: acupunctureImg,
+      image: 'https://res.cloudinary.com/diydpxavd/image/upload/v1749591747/acupuncture_ybkipz.jpg',
       prices: [
         "£45"
       ],

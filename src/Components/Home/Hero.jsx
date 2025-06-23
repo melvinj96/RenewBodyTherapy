@@ -24,16 +24,20 @@ const Hero = () => {
           View Services
         </Link>
         <div className="award-badge">
-          <img 
-            src={awardImage} 
-            alt="Three Best Rated Excellence Award 2024" 
-            className="award-image"
-          />
-          <img 
-            src={awardImage2} 
-            alt="Massage Therapy Practitioner Award 2024" 
-            className="award-image rounded-award"
-          />
+          <Link to="/about#awards-section">
+            <img 
+              src={awardImage} 
+              alt="Three Best Rated Excellence Award 2024" 
+              className="award-image"
+            />
+          </Link>
+          <Link to="/about#awards-section">
+            <img 
+              src={awardImage2} 
+              alt="Massage Therapy Practitioner Award 2024" 
+              className="award-image rounded-award"
+            />
+          </Link>
         </div>
       </div>
     </div>

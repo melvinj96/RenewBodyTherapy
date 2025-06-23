@@ -2,6 +2,7 @@ import Description from './Description';
 import ServicePoints from './ServicePoints';
 import TitleBand from '../Titleband';
 import '../../assets/css/About.css';
+import Awards from './Awards';
 
 function About() {
   return (
@@ -9,6 +10,7 @@ function About() {
       <TitleBand title="About" />
       <div className="about-container">
         <Description />
+        <Awards />
         <ServicePoints />
       </div>
     </div>

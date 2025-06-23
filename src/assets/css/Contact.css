@@ -48,6 +48,27 @@
     flex-direction: column;
     margin-bottom: 1rem;
   }
+
+  .form-group label.required {
+    font-weight: 600;
+  }
+
+  .colspan-2 {
+    grid-column: span 2;
+  }
+
+  .disclaimer-checkbox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .consultation-heading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   
   label {
     margin-bottom: 0.5rem;
