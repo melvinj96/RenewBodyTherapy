@@ -73,3 +73,49 @@
   .fw-medium { font-weight: var(--fw-medium); }
   .fw-semibold { font-weight: var(--fw-semibold); }
   .fw-bold { font-weight: var(--fw-bold); }
+
+  .availability-banner {
+    background-color: #d1400b;
+    color: white;
+    padding: 0.75rem 1rem;
+    text-align: center;
+    font-weight: 500;
+    font-family: var(--font-tertiary);
+    border-bottom: 2px solid #d1400b;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .availability-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .availability-icon {
+    font-size: 1.2rem;
+    flex-shrink: 0;
+  }
+
+  .availability-text {
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+
+  @media (max-width: 768px) {
+    .availability-banner {
+      padding: 0.5rem;
+    }
+    
+    .availability-content {
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+    
+    .availability-text {
+      font-size: 0.9rem;
+      text-align: center;
+    }
+  }

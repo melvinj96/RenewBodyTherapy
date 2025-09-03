@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import TitleBand from '../Titleband';
 import Alert from '../Shared/Alert';
 import LoadingSpinner from '../Shared/LoadingSpinner';
+import AvailabilityBanner from '../Home/AvailabilityBanner';
 import ReCAPTCHA from "react-google-recaptcha";
 import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
 import '../../assets/css/Contact.css';
@@ -311,6 +312,7 @@ function Contact() {
                     title="BOOK YOUR APPOINTMENT"
                     subtitle="I am available with restricted timings on weekdays and all day on weekends."
                 />
+                <AvailabilityBanner />
                 <div className="contact-container">
                     {/* Info Section */}
                     <section className="contact-info">
