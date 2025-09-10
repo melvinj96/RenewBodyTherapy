@@ -9,13 +9,13 @@ const headers = {
 };
 
 const validateRequest = (data) => {
-  const { firstName, lastName, email, phone, service, date, notes, 'bot-field': botField } = data;
+  const { firstName, lastName, email, phone, service, date, notes, sex, dob, handedness, 'bot-field': botField } = data;
 
   // Check for honeypot
   if (botField) return false;
 
-  // Validate required fields
-  if (!firstName || !lastName || !email || !phone || !service || !date || !notes) return false;
+  // Validate required fields (notes is optional)
+  if (!firstName || !lastName || !email || !phone || !service || !date || !sex || !dob || !handedness) return false;
 
   // Validate email format
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -43,7 +43,10 @@ exports.handler = async (event) => {
 
   try {
     const data = JSON.parse(event.body);
+    console.log('Received form data:', JSON.stringify(data, null, 2));
+    
     if (!validateRequest(data)) {
+      console.log('Validation failed for data:', JSON.stringify(data, null, 2));
       return {
         statusCode: 400,
         headers,
@@ -77,7 +80,7 @@ exports.handler = async (event) => {
             <p><strong>Allergies:</strong> ${allergies}</p>
             <p><strong>Exercise Information:</strong> ${exerciseInformation}</p>
             <p><strong>Handedness:</strong> ${handedness}</p>
-            <p><strong>Notes:</strong> ${notes}</p>
+            <p><strong>Notes:</strong> ${notes || 'No additional notes provided'}</p>
             <p><strong>Consent to photo/video content for promotional purposes:</strong> ${disclaimer && disclaimer.consentToMedia ? 'Yes' : 'No'}</p>
           </div>
         </div>
