@@ -323,9 +323,9 @@ function Contact() {
                                 <i className="fas fa-envelope"></i>
                                 jikku2006@gmail.com
                             </a>
-                            <a href="tel:07401261289" className="contact-item">
+                            <a href="tel:01384437111" className="contact-item">
                                 <i className="fas fa-phone"></i>
-                                07401261289
+                                01384437111
                             </a>
                         </div>
                     </section>

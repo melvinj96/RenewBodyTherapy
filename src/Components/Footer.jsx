@@ -17,17 +17,15 @@ const Footer = () => {
             Contact Us
           </Link>
         </div>
+          <p className="phone-item">
+            <a href="tel:01384437111" className="phone-number">
+              07401261280
+            </a>
+          </p>
 
         <div className="footer-copyright">
           <p>©{currentYear} by Renew Body Therapy. Created by {' '}
-            <a 
-              href="https://bedford.digital" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="agency-link"
-            >
               Digital Apex
-            </a>
           </p>
         </div>
       </div>
