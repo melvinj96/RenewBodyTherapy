@@ -4,6 +4,13 @@ function Awards() {
   // Example awards data; replace or extend as needed
   const awards = [
     {
+      title: "Best Massage Therapist ",
+      organization: "ThreeBest Rated",
+      year: 2025,
+      description: "Awarded for exceptional service and client satisfaction.",
+      image: "https://res.cloudinary.com/diydpxavd/image/upload/v1762855584/massage_therapists-dudley-2025-drk_wnwhdz.svg"
+    },
+    {
       title: "West Midlands Massage Therapy Practitioner of the Year",
       organization: "Prestige Awards",
       year: 2024,
@@ -17,6 +24,7 @@ function Awards() {
       description: "Awarded for exceptional service and client satisfaction.",
       image: "https://res.cloudinary.com/diydpxavd/image/upload/v1749591659/threebest-award-2024_bs3xkf.png"
     }
+
   ];
 
   return (
