@@ -63,21 +63,12 @@ function Services() {
             <p><strong>Who Can Benefit:</strong> While it is primarily designed for athletes, anyone who engages in physical activity can benefit from sports massage, including weekend warriors, fitness enthusiasts, and individuals with physically demanding jobs.</p>
         `,
       selectValue: "sports"
-    },
-    {
-      title: "HEAD, NECK & SHOULDER MASSAGE",
-      image: 'https://res.cloudinary.com/diydpxavd/image/upload/v1749591751/head-massage_o80uw5.jpg',
-      prices: [
-        "30 mins - £30"
-      ],
-      description: "This focused massage targets common areas of tension in the upper body. Perfect for those who experience headaches, neck pain, or shoulder stiffness, particularly from desk work or stress. Helps improve circulation and reduce tension in these vital areas.",
-      selectValue: "head-massage"
-    },
+    },    
     {
       title: "STROKE REHABILITATION",
       image: 'https://res.cloudinary.com/diydpxavd/image/upload/v1749591762/stroke-rehab_vr4xvi.jpg',
       prices: [
-        "60 mins - £70"
+        "60 mins - £55"
       ],
       description: `
         <p>A therapist can play a crucial role in the recovery process following a stroke. Different types of therapists may be involved, each addressing various aspects of rehabilitation. Here are some key ways therapists can help:</p>
@@ -103,7 +94,7 @@ function Services() {
       title: "FALLS INTERVENTION",
       image: 'https://res.cloudinary.com/diydpxavd/image/upload/v1749591750/falls-intervention_itquxi.jpg',
       prices: [
-        "60 mins - £70"
+        "60 mins - £55"
       ],
       description: `
         <p>A therapist, particularly a physical therapist or an occupational therapist, can help individuals who are at risk of falling at home in several ways:</p>
@@ -151,7 +142,7 @@ function Services() {
       title: "POST HOSPITAL DISCHARGE REHABILITATION",
       image: 'https://res.cloudinary.com/diydpxavd/image/upload/v1749591756/post-hospital_petri9.jpg',
       prices: [
-        "60 mins - £70"
+        "60 mins - £55"
       ],
       description: `
         <p>Rehabilitation at home can be an essential aspect of recovery following a long hospital stay. Here are several ways it can help:</p>
@@ -186,7 +177,7 @@ function Services() {
       title: "RESPIRATORY/LONG COVID REHABILITATION",
       image: 'https://res.cloudinary.com/diydpxavd/image/upload/v1749591758/respiratory-rehab_mzccnt.jpg',
       prices: [
-        "60 mins - £70"
+        "60 mins - £55"
       ],
       description: `
         <p>Respiratory and long COVID rehabilitation can offer several benefits for individuals recovering from COVID-19, especially those who experience lingering symptoms or respiratory issues. Here are some ways in which rehab can help:</p>
@@ -217,7 +208,7 @@ function Services() {
       title: "MOBILE PHYSIOTHERAPY",
       image: 'https://res.cloudinary.com/diydpxavd/image/upload/v1749591755/physio_w866c0.jpg',
       prices: [
-        "60 mins - £70"
+        "60 mins - £55"
       ],
       description: `
         <p>Mobile physiotherapy refers to a service where physiotherapists provide assessment, treatment, and rehabilitation for patients in their own homes or other convenient locations, rather than requiring them to travel to a clinic. This approach offers several advantages, particularly for individuals who may have mobility issues, chronic pain, or other health conditions that make it difficult to attend traditional physiotherapy sessions. Here are some key features and benefits of mobile physiotherapy:</p>
@@ -248,7 +239,7 @@ function Services() {
       title: "OCCUPATIONAL THERAPY",
       image: 'https://res.cloudinary.com/diydpxavd/image/upload/v1749591753/occupational_ghxf7i.jpg',
       prices: [
-          "60 mins - £65"
+          "60 mins - £55"
       ],
       description: `
         <p>Occupational therapy is a holistic and client-centered health profession that focuses on enabling individuals to participate in meaningful activities of daily life. It is designed to help people of all ages achieve independence and improve their quality of life by addressing physical, cognitive, emotional, and social needs. Occupational therapists work collaboratively with clients to develop personalized strategies that enhance their ability to perform everyday tasks and engage in activities that are important to them.</p>
@@ -279,7 +270,7 @@ function Services() {
         selectValue: "vitamin-b12"
     },
     {
-      title: "ACUPUNCTURE",
+      title: "ACUPUNCTURE/DRY NEEDLING",
       image: 'https://res.cloudinary.com/diydpxavd/image/upload/v1749591747/acupuncture_ybkipz.jpg',
       prices: [
         "£45"
@@ -337,6 +328,7 @@ function Services() {
         <ServiceModal
           service={selectedService}
           onClose={handleCloseModal}
+          onBook={() => handleBook(selectedService)}
         />
       )}
     </div>

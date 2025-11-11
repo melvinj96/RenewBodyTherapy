@@ -1,4 +1,4 @@
-function ServiceModal({ service, onClose }) {
+function ServiceModal({ service, onBook, onClose }) {
     return (
       <div className="modal-overlay" onClick={onClose}>
         <div className="modal-content" onClick={e => e.stopPropagation()}>
@@ -13,6 +13,7 @@ function ServiceModal({ service, onClose }) {
               <p key={index}>{price}</p>
             ))}
           </div>
+          <button className="btn-book" onClick={onBook}>Book</button>
         </div>
       </div>
     );
