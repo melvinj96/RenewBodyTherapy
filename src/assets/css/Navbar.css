@@ -88,8 +88,84 @@
     background-color: #e67e22;
   }
   
-  /* Mobile Responsive Design */
-  @media (max-width: 900px) {
+  .nav-item-wrapper {
+    position: relative;
+  }
+
+  .nav-link-with-submenu {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .submenu-toggle {
+    display: none; /* Hidden on desktop */
+    color: var(--secondary-color);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
+  .submenu-toggle .rotated {
+    transform: rotate(180deg);
+  }
+
+  .submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--primary-color);
+    min-width: 200px;
+    list-style: none;
+    padding: 0.5rem 0;
+    margin: 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+
+  .submenu.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .submenu li {
+    margin: 0;
+  }
+
+  .submenu li a {
+    display: block;
+    padding: 0.75rem 1.5rem;
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .submenu li a:hover {
+    background-color: rgba(252, 144, 46, 0.1);
+    color: white;
+    padding-left: 2rem;
+  }
+
+  .submenu li a.active {
+    background-color: rgba(252, 144, 46, 0.2);
+    color: white;
+  }
+
+/* Desktop: Show on hover */
+@media (min-width: 901px) {
+  .nav-item-wrapper:hover .submenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 900px) {
     .navbar-container {
         position: relative; /* Add this */
     }
@@ -127,6 +203,41 @@
   
     .social-media {
       margin-top: 1rem;
+    }
+
+    .submenu-toggle {
+      display: block; /* Show on mobile */
+    }
+
+    .submenu {
+      position: static;
+      max-height: 0;
+      overflow: hidden;
+      transform: none;
+      box-shadow: none;
+      padding: 0;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+    }
+
+    .submenu.active {
+      max-height: 500px;
+      padding: 0.5rem 0;
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .submenu li a {
+      padding-left: 2rem; /* Indent submenu items */
+      font-size: 0.9rem;
+    }
+
+    .nav-link-with-submenu {
+      width: 100%;
+      justify-content: center;
+    }
+
+    .nav-link-with-submenu.active {
+      padding-right: 1rem;
     }
   }
   

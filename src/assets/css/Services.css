@@ -3,6 +3,53 @@
     margin: 0 auto;
     padding: 2rem;
   }
+
+  .services-container h2 {
+    color: #333;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+  }
+
+  .services-container p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+  }
+
+  .services-container ul {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+    line-height: 1.8;
+  }
+
+  .services-container li {
+    margin-bottom: 0.5rem;
+  }
+
+  .services-container a {
+    color: #E67E22;
+    text-decoration: none;
+  }
+
+  .services-container a:hover {
+    text-decoration: underline;
+  }
+
+  .services-container h3 {
+    color: #333;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+
+  .services-container .inline-link {
+    color: #E67E22;
+    text-decoration: underline;
+  }
+
+  .services-container .inline-link:hover {
+    color: #d66a1a;
+  }
   
   .services-intro {
     text-align: center;
@@ -87,6 +134,11 @@
     background-color: #333;
     color: white;
   }
+
+  .btn-book-sports {
+    background-color: #333;
+    color: #E67E22;
+  }
   
   /* Modal styles */
   .modal-overlay {
@@ -146,6 +198,13 @@
     border: none;
     font-size: 1.5rem;
     cursor: pointer;
+  }
+
+  .services-buttons {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+    justify-content: center;
   }
   
   /* Responsive design */

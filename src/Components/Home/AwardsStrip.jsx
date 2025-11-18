@@ -4,7 +4,7 @@ import '../../assets/css/AwardsStrip.css';
 
 const awardLogos = [
   {
-    src: 'https://threebestrated.co.uk/awards/massage_therapists-dudley-2025-drk.svg',
+    src: 'https://res.cloudinary.com/diydpxavd/image/upload/v1762855584/massage_therapists-dudley-2025-drk_wnwhdz.svg',
     alt: 'Massage Therapy Practitioner Award 2025',
     rounded: true,
   },
