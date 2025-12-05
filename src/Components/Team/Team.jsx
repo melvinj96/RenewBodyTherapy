@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import TitleBand from '../Titleband';
 import TeamMember from './TeamMember';
 import '../../assets/css/Team.css';
@@ -5,6 +6,14 @@ import jikkuImg from '../../assets/images/jikku.jpg';
 import geoffImg from '../../assets/images/geoff.jpg';
 
 function Team() {
+  useEffect(() => {
+    document.title = 'Meet The Dudley Massage Therapists | Renew Body Therapy';
+    
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Discover the professionals behind our 5-star rated clinic | Experienced, fully insured & dedicated to your recovery | Book now →');
+    }
+  }, []);
   const teamMembers = [
     {
       name: "Jikku Joseph",

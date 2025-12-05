@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Lightbox from 'yet-another-react-lightbox';
 import "yet-another-react-lightbox/styles.css";
 import Video from "yet-another-react-lightbox/plugins/video";
@@ -7,6 +7,15 @@ import '../../assets/css/Gallery.css';
 
 function Gallery() {
     const [index, setIndex] = useState(-1);
+
+    useEffect(() => {
+      document.title = 'Treatment Gallery | Dudley Massage Clinic | Renew Body Therapy';
+      
+      const metaDescription = document.querySelector('meta[name="description"]');
+      if (metaDescription) {
+        metaDescription.setAttribute('content', 'View our treatment space & client care in action | Professional massage and rehabilitation therapy in Dudley | See more →');
+      }
+    }, []);
 
   const galleryItems = [    
     {

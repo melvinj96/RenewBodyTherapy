@@ -4,7 +4,7 @@ import Alert from '../Shared/Alert';
 import LoadingSpinner from '../Shared/LoadingSpinner';
 import AvailabilityBanner from '../Home/AvailabilityBanner';
 import ReCAPTCHA from "react-google-recaptcha";
-import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
+import GoogleMapComponent from '../Shared/GoogleMapComponent';
 import '../../assets/css/Contact.css';
 import Select from 'react-select';
 
@@ -30,16 +30,6 @@ function Contact() {
 
     const [captchaValue, setCaptchaValue] = useState(null);
 
-    const mapCenter = {
-        lat: 52.5107,
-        lng: -2.0866
-    };
-
-    const mapStyles = {
-        height: "400px",
-        width: "100%"
-    };
-
     const [alert, setAlert] = useState({ show: false, message: '', type: 'info' });
 
     const [isLoading, setIsLoading] = useState(false);
@@ -51,6 +41,13 @@ function Contact() {
     });
 
     useEffect(() => {
+        document.title = 'Contact Renew Body Therapy | Book Massage in Dudley';
+        
+        const metaDescription = document.querySelector('meta[name="description"]');
+        if (metaDescription) {
+            metaDescription.setAttribute('content', 'Call or message us to book your therapy session | Located on Bristol Road, Dudley | Fast response times | Get in touch now →');
+        }
+
         const params = new URLSearchParams(window.location.search);
         const service = params.get('service');
         if (service) {
@@ -650,15 +647,7 @@ function Contact() {
                         </form>
                     </section>
                     <section className="contact-map">
-                        <LoadScript googleMapsApiKey={process.env.REACT_APP_GOOGLE_MAPS_API_KEY}>
-                            <GoogleMap
-                                mapContainerStyle={mapStyles}
-                                zoom={13}
-                                center={mapCenter}
-                            >
-                                <Marker position={mapCenter} />
-                            </GoogleMap>
-                        </LoadScript>
+                        <GoogleMapComponent height="400px" zoom={13} />
                     </section>
                 </div>
             </div>

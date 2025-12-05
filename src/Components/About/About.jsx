@@ -8,11 +8,11 @@ import Awards from './Awards';
 function About() {
 
   useEffect(() => {
-    document.title = 'Qualified Massage Therapist Dudley | About Renew Body Therapy';
+    document.title = 'Sports Massage Therapist in Dudley | About Renew Body Therapy';
     const metaDescription = document.querySelector('meta[name="description"]');
-  if (metaDescription) {
-    metaDescription.setAttribute('content', 'Find out more about our origins, experience &amp; future goals | Renowned massage therapist in Dudley offering a range of services | Learn more →');
-  }
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Learn about our NHS-qualified therapist & personalised care approach | Serving Dudley & nearby areas | Book your appointment today →');
+    }
   }, []);
 
   return (

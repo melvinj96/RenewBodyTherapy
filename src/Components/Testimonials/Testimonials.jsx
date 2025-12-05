@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Lightbox from "yet-another-react-lightbox";
 import Video from "yet-another-react-lightbox/plugins/video";
 import "yet-another-react-lightbox/styles.css";
@@ -7,6 +7,15 @@ import '../../assets/css/Testimonials.css';
 
 function Testimonials() {
     const [videoIndex, setVideoIndex] = useState(-1);
+
+    useEffect(() => {
+      document.title = 'Client Reviews | Massage Therapy Dudley | Renew Body Therapy';
+      
+      const metaDescription = document.querySelector('meta[name="description"]');
+      if (metaDescription) {
+        metaDescription.setAttribute('content', 'Read verified client reviews & success stories | Trusted by the local community for expert care & real results | Book your visit today →');
+      }
+    }, []);
 
     const testimonialQuotes = [
       {
