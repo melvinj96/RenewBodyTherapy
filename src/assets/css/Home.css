@@ -9,7 +9,6 @@
     color: white;
     padding: 0.5rem;
     text-align: center;
-    margin-top: 0.5rem;
     font-weight: bold;
     display: flex;
     align-items: center;
@@ -164,10 +163,8 @@
     width: 100%;
     height: auto;
     display: block;
-    object-fit: contain;
+    object-fit: cover;
     transition: transform 0.3s ease;
-    max-width: 400px;
-    margin: 0 auto;
   }
 
   .home-content-image:hover img {
@@ -305,10 +302,6 @@
     .home-services-section,
     .home-community-section {
       grid-template-columns: 1fr;
-    }
-
-    .reverse-on-mobile .home-content-image {
-      order: -1;
     }
 
     .home-community-image {

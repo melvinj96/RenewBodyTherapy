@@ -1,9 +1,7 @@
 import { useEffect } from 'react';
 import Description from './Description';
-import ServicePoints from './ServicePoints';
 import TitleBand from '../Titleband';
 import '../../assets/css/About.css';
-import Awards from './Awards';
 
 function About() {
 
@@ -20,8 +18,8 @@ function About() {
       <TitleBand title="About Renew Body Therapy - Dedicated Massage Therapist in Dudley" />
       <div className="about-container">
         <Description />
-        <Awards />
-        <ServicePoints />
+        {/* <Awards /> */}
+        {/* <ServicePoints /> */}
       </div>
     </div>
   );

@@ -47,28 +47,27 @@ function Description() {
     };
 
     const regularSections = [
-        {
-            title: "The Roots of Renew Body",
-            content: (
-                <>
-                    <p>
-                        Renew Body Therapy was founded to solve a real problem that many people in the community face,
-                        long waiting lists for physiotherapy and occupational therapy services. After nearly a decade working
-                        within the NHS across acute and community settings, our founder saw first-hand how delays in
-                        treatment can negatively affect recovery and quality of life.
-                    </p>
-                    <p>
-                        Driven by a desire to offer accessible, affordable, and honest care, Renew Body Therapy was created to
-                        give people the chance to receive the right treatment at the right time. There is deep personal
-                        satisfaction in helping someone walk out of the clinic happier and more comfortable than when they
-                        arrived, and that feeling remains at the heart of the business today.
-                        Every client matters, every outcome matters, and every treatment plan is tailored to the individual.
-                    </p>
-                </>
-            ),
-            video: 'https://res.cloudinary.com/diydpxavd/video/upload/v1764975196/video_2_sd320a.mp4',
-            poster: 'https://res.cloudinary.com/diydpxavd/image/upload/v1749591676/clients_image1_fjcuse.jpg'
-        },
+        // {
+        //     title: "The Roots of Renew Body",
+        //     content: (
+        //         <>
+        //             <p>
+        //                 Renew Body Therapy was founded to solve a real problem that many people in the community face,
+        //                 long waiting lists for physiotherapy and occupational therapy services. After nearly a decade working
+        //                 within the NHS across acute and community settings, our founder saw first-hand how delays in
+        //                 treatment can negatively affect recovery and quality of life.
+        //             </p>
+        //             <p>
+        //                 Driven by a desire to offer accessible, affordable, and honest care, Renew Body Therapy was created to
+        //                 give people the chance to receive the right treatment at the right time. There is deep personal
+        //                 satisfaction in helping someone walk out of the clinic happier and more comfortable than when they
+        //                 arrived, and that feeling remains at the heart of the business today.
+        //                 Every client matters, every outcome matters, and every treatment plan is tailored to the individual.
+        //             </p>
+        //         </>
+        //     ),
+        //     image: 'https://res.cloudinary.com/diydpxavd/image/upload/v1764975478/PXL_20250930_162150034_epc4so.jpg'
+        // },
         {
             title: "Our Professional Background & Clinical Expertise",
             content: (
@@ -98,6 +97,10 @@ function Description() {
             ),
             image: 'https://res.cloudinary.com/diydpxavd/image/upload/v1762856587/prestige_award2_alf6xb.jpg'
         },
+        
+    ];
+
+    const sections = [
         {
             title: "Our Objectives",
             content: (
@@ -118,11 +121,9 @@ function Description() {
                     <p>Clients should leave feeling understood, supported, and confident in their recovery journey.</p>
                 </>
             ),
-            image: 'https://res.cloudinary.com/diydpxavd/image/upload/v1749591686/clients_image9_dhydwy.jpg'
-        }
-    ];
-
-    const sections = [
+            video: 'https://res.cloudinary.com/diydpxavd/video/upload/v1764975196/video_2_sd320a.mp4',
+            poster: 'https://res.cloudinary.com/diydpxavd/image/upload/v1749591676/clients_image1_fjcuse.jpg'            
+        },
         {
             title: "What Makes Renew Body Therapy Different",
             content: (
@@ -224,13 +225,19 @@ function Description() {
         <div className="description-container">
             <div className="intro-section">
                 <div className="intro-content">
+                    <h2 className="intro-title">The Roots of Renew Body</h2>
                     <p>
-                        Renew Body Therapy is a dedicated rehabilitation and massage clinic committed to helping people move
-                        better, feel better, and return to a life without pain. Founded to bring honest, affordable, clinically
-                        backed treatment to the local community, the clinic offers a unique blend of sports massage, dry
-                        needling, occupational therapy, physiotherapy, and tailored rehabilitation support. Our skilled massage
-                        therapist ensures every service is delivered with compassion, professionalism, and a genuine
-                        commitment to long-term results.
+                        Renew Body Therapy was founded to solve a real problem that many people in the community face,
+                        long waiting lists for physiotherapy and occupational therapy services. After nearly a decade working
+                        within the NHS across acute and community settings, our founder saw first-hand how delays in
+                        treatment can negatively affect recovery and quality of life.
+                    </p>
+                    <p>
+                        Driven by a desire to offer accessible, affordable, and honest care, Renew Body Therapy was created to
+                        give people the chance to receive the right treatment at the right time. There is deep personal
+                        satisfaction in helping someone walk out of the clinic happier and more comfortable than when they
+                        arrived, and that feeling remains at the heart of the business today.
+                        Every client matters, every outcome matters, and every treatment plan is tailored to the individual.
                     </p>
                 </div>
                 <div className="intro-image">
@@ -249,6 +256,7 @@ function Description() {
                     />
                 </div>
             </div>
+
             <div className="description-buttons">
                 <Link to="/Contact" className="about-btn">Book an Appointment</Link>
             </div>
@@ -291,6 +299,16 @@ function Description() {
                                 </div>
                             )}
                         </div>
+                        {index === 1 && (
+                            <div className="regular-section-button" style={{ marginTop: '2rem', textAlign: 'center' }}>
+                                <Link 
+                                    to="/awards" 
+                                    className="inline-block bg-secondary hover:bg-secondary-dark text-white font-semibold px-8 py-3 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+                                >
+                                    View Our Awards & Recognition
+                                </Link>
+                            </div>
+                        )}
                     </div>
                 ))}
             </div>
@@ -312,7 +330,30 @@ function Description() {
                                 <div className="accordion-text">
                                     {section.content}
                                 </div>
-                                {section.image && (
+                                {section.video ? (
+                                    <div className="accordion-video-wrapper">
+                                        <video
+                                            src={section.video}
+                                            className="accordion-video"
+                                            poster={section.poster}
+                                            playsInline
+                                            controls
+                                            controlsList="nodownload nofullscreen noremoteplayback"
+                                            onContextMenu={(e) => e.preventDefault()}
+                                            loop
+                                            muted
+                                            style={{
+                                                width: '100%',
+                                                maxWidth: '350px',
+                                                aspectRatio: '9/16',
+                                                borderRadius: '12px',
+                                                cursor: 'pointer',
+                                                boxShadow: '0 4px 16px rgba(0,0,0,0.13)'
+                                            }}
+                                            title={section.title}
+                                        />
+                                    </div>
+                                ) : section.image && (
                                     <div className="accordion-image">
                                         <img src={section.image} alt={section.title} />
                                     </div>
@@ -321,27 +362,7 @@ function Description() {
                         </div>
                     </div>
                 ))}
-            </div>
-
-            <div className="therapist-section">
-                <h2>Meet Your Dudley-Based Massage Therapist</h2>
-                <div className="team-member">
-                    <div className="member-image">
-                        <img src="https://res.cloudinary.com/diydpxavd/image/upload/v1763471532/jikku_deovbi.jpg" alt="Jikku" />
-                    </div>
-                    <div className="member-info">
-                        <p>
-                            Meet Jikku, an experienced NHS clinician, fully qualified in occupational therapy, sports massage, and
-                            rehabilitation-focused hands-on treatments. With nearly a decade of clinical experience and extensive in-service training, every client receives expert care grounded in clinical reasoning, anatomy, and
-                            evidence-based practice.
-                        </p>
-                        <p>
-                            Trusted by Bupa and highly rated within the Dudley community, Jikku offers both professionalism and
-                            approachability, ensuring every client feels comfortable and supported at every stage of treatment.
-                        </p>
-                    </div>
-                </div>
-            </div>
+            </div>            
 
             <div className="contact-section">
                 <h2>Book Your Appointment</h2>

@@ -2,7 +2,6 @@ import { useEffect } from 'react';
 import TitleBand from '../Titleband';
 import TeamMember from './TeamMember';
 import '../../assets/css/Team.css';
-import jikkuImg from '../../assets/images/jikku.jpg';
 import geoffImg from '../../assets/images/geoff.jpg';
 
 function Team() {
@@ -18,11 +17,10 @@ function Team() {
     {
       name: "Jikku Joseph",
       title: "Founder & Occupational/Massage Therapist",
-      image: jikkuImg, // Make sure to add the image to your public folder
+      image: 'https://res.cloudinary.com/diydpxavd/image/upload/v1765226489/new_dp_for_website_qrqjta.jpg',
       description: [
-        "Hi I'm Jikku, and welcome to Renew Body Therapy where my aim is to transform the health and wellbeing of people. I 'm a qualified Occupational Therapist with over 7 years of experience, registered under the Health and Care Professions Council (HCPC) and a member of the Royal College of Occupational Therapist (RCOT).",
-        "I specialise in treating people suffering from Respiratory, Traumatic injuries and Neurological conditions.",
-        "I am also a qualified massage therapist specialising in Sports Massage, Deep Tissue, Swedish, Bamboo, Hot Stone and Indian Head massage. I currently run home based and mobile clinics in the West Midlands and Bedfordshire."
+        "Meet Jikku, an experienced NHS clinician, fully qualified in occupational therapy, sports massage, and rehabilitation-focused hands-on treatments. With nearly a decade of clinical experience and extensive in-service training, every client receives expert care grounded in clinical reasoning, anatomy, and evidence-based practice.",
+        "Trusted by Bupa and highly rated within the Dudley community, Jikku offers both professionalism and approachability, ensuring every client feels comfortable and supported at every stage of treatment."
       ]
     },
     {
@@ -40,7 +38,7 @@ function Team() {
 
   return (
     <div>
-      <TitleBand title="Meet the Team" />
+      <TitleBand title="Meet Your Dudley-Based Massage Therapist" />
       <div className="team-container">
         {teamMembers.map((member, index) => (
           <TeamMember key={index} {...member} />

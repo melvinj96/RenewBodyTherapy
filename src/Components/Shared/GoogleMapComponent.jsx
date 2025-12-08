@@ -2,8 +2,8 @@ import { LoadScript, GoogleMap, Marker } from '@react-google-maps/api';
 
 const GoogleMapComponent = ({ height = "400px", zoom = 13 }) => {
   const mapCenter = {
-    lat: 52.5107,
-    lng: -2.0866
+    lat: 52.478186, 
+    lng: -2.078005
   };
 
   const mapStyles = {

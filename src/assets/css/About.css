@@ -19,7 +19,16 @@
 
 .intro-content {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.intro-title {
+  color: #333;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  font-family: var(--font-tertiary);
 }
 
 .intro-image {
@@ -84,6 +93,8 @@
 
 .regular-section-image {
   width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -225,6 +236,25 @@
 
 .accordion-image:hover img {
   transform: scale(1.05);
+}
+
+.accordion-video-wrapper {
+  max-width: 350px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.accordion-video {
+  width: 100%;
+  max-width: 350px;
+  aspect-ratio: 9/16;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.13);
 }
 
 .therapist-section {

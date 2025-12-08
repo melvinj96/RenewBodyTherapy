@@ -23,9 +23,9 @@ const Home = () => {
       <PartnerBanner />
       <AvailabilityBanner />
       <Hero />
-      <HomeContent />
       <AwardsStrip />
       <QualificationStrip />
+      <HomeContent />
     </div>
   );
 };
