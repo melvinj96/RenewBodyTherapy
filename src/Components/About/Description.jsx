@@ -299,13 +299,16 @@ function Description() {
                                 </div>
                             )}
                         </div>
-                        {index === 1 && (
-                            <div className="regular-section-button" style={{ marginTop: '2rem', textAlign: 'center' }}>
+                        {index === 0 && (
+                            <div className="flex justify-center mt-8">
                                 <Link 
                                     to="/awards" 
-                                    className="inline-block bg-secondary hover:bg-secondary-dark text-white font-semibold px-8 py-3 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+                                    className="inline-flex items-center gap-2 bg-secondary hover:bg-secondary-dark text-white font-semibold px-8 py-4 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
                                 >
-                                    View Our Awards & Recognition
+                                    View Our Awards
+                                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                                    </svg>
                                 </Link>
                             </div>
                         )}

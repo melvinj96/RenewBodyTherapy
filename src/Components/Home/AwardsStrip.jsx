@@ -74,7 +74,7 @@ const AwardsStrip = () => (
       {/* Footer CTA */}
       <div className="mt-10 sm:mt-12 text-center">
         <Link
-          to="/about#awards-section"
+          to="/awards"
           className="inline-flex items-center gap-2 text-sm sm:text-base text-white/80 hover:text-secondary font-primary transition-colors duration-300 group"
         >
           <span>Learn more about our awards</span>
