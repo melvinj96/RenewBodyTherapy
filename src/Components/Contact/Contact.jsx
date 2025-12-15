@@ -405,7 +405,7 @@ function Contact() {
                                         <option value="physio">Mobile Physiotherapy</option>
                                         <option value="occupational">Occupational Therapy</option>
                                         <option value="vitamin-b12">Vitamin B12 Injections</option>
-                                        <option value="acupuncture">Acupuncture</option>
+                                        <option value="acupuncture">Dry Needling</option>
                                     </select>
                                 </div>
                                 <div className="form-group">

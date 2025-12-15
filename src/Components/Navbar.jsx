@@ -57,7 +57,7 @@ const Navbar = () => {
         { path: '/services/sports-massage', label: 'Sports Massage' },
         { path: '/services/deep-tissue-massage', label: 'Deep Tissue Massage' },
         { path: '/services/swedish-massage', label: 'Swedish Massage' },
-        { path: '/services/acupuncture-dry-needling', label: 'Acupuncture & Dry Needling' },
+        { path: '/services/acupuncture-dry-needling', label: 'Dry Needling' },
         { path: '/services/stroke-rehabilitation', label: 'Stroke Rehabilitation' },
         { path: '/services/falls-intervention', label: 'Falls Intervention' },
         { path: '/services/post-hospital-rehabilitation', label: 'Post-Hospital Rehabilitation' },

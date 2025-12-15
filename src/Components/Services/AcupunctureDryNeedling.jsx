@@ -3,103 +3,123 @@ import ServicePageTemplate from './ServicePageTemplate';
 function AcupunctureDryNeedling() {
   return (
     <ServicePageTemplate
-      title="Acupuncture & Dry Needling in Dudley"
-      metaTitle="Acupuncture & Dry Needling in Dudley | Renew Body Therapy"
-      metaDescription="Professional dry needling & acupuncture in Dudley for pain relief | Reduce muscle tightness & improve circulation | Book today →"
+      title="Dry Needling in Dudley"
+      metaTitle="Effective Dry Needling Dudley | Renew Body Therapy"
+      metaDescription="Professional dry needling for pain relief & muscle tension in Dudley | NHS qualified therapist & tailored treatment plans | Book your consultation today →"
       intro={[
-        "Discover the benefits of acupuncture and dry needling at Renew Body Therapy in Dudley. This effective treatment technique is used to reduce muscle tightness, improve circulation, and relieve pain through the strategic placement of fine needles.",
-        "Dry needling can be offered as a standalone service or combined with massage therapy to enhance therapeutic outcomes. Our NHS-qualified therapist delivers this treatment safely and professionally in our comfortable home clinic."
+        "If you are experiencing persistent muscle tightness, deep knots, or long-term pain that is limiting your daily movement, our dry needling in Dudley can offer targeted and effective relief. At Renew Body Therapy, all treatments are delivered by an NHS-qualified therapist with extensive clinical experience in rehabilitation, orthopaedics, neurology, and musculoskeletal care.",
+        "Dry needling is available as a standalone treatment or combined with sports massage for enhanced therapeutic results. Sessions take place in a comfortable, private home based clinic on Bristol Road in Dudley, designed to provide a calm and professional environment for recovery."
       ]}
       whyChoose={[
-        "NHS-qualified therapist with specialized training",
-        "Safe, professional needle technique",
-        "Effective for chronic pain and muscle tightness",
-        "Can be combined with massage therapy",
-        "Comfortable, private clinic environment",
-        "Affordable pricing"
+        "NHS-qualified therapist with nearly 10 years of healthcare experience",
+        "Safe, sterile, single-use needle technique",
+        "Effective for muscle tightness, trigger points, and chronic pain",
+        "Can be combined with sports massage",
+        "Comfortable private clinic setting",
+        "Affordable pricing with no pressure to commit to block bookings"
       ]}
       prices={[
         "£45"
       ]}
       whatIs={[
-        "Dry needling is a therapeutic technique that involves inserting fine needles into trigger points (tight bands of muscle) to reduce pain, improve circulation, and relieve muscle tightness. Unlike traditional acupuncture, dry needling focuses on treating muscular and myofascial pain.",
-        "This treatment can be offered as a standalone service or combined with massage therapy to enhance the therapeutic effect. The technique is particularly effective for addressing chronic pain, muscle knots, and restricted movement."
+        "Dry needling is a modern therapeutic technique used to release tight muscles, deactivate trigger points, and improve movement. Fine, sterile needles are inserted into specific points within the muscle. This stimulates blood flow, reduces tension, and encourages the body's natural healing response.",
+        "Dry needling differs from acupuncture because it focuses on muscular and myofascial pain rather than traditional energy pathways. This makes it particularly effective for clients with:",
+        "• Long standing muscle knots",
+        "• Restricted movement",
+        "• Overuse injuries",
+        "• Postural tension",
+        "• Localised or radiating muscular pain",
+        "Dry needling can be used independently or combined with massage therapy to increase the overall effect of treatment.",
+        "For related therapies, see our Sports Massage page."
       ]}
       benefits={[
         {
           title: "Reduce Muscle Tightness",
-          description: "Targets trigger points to release tight muscles and improve flexibility."
+          description: "Trigger points within the muscle can create pain, stiffness, and weakness. Dry needling directly targets these points, helping the muscle relax and return to normal function."
         },
         {
           title: "Relieve Pain",
-          description: "Effective for reducing chronic pain, especially in the neck, back, and shoulders."
+          description: "Many clients experience a noticeable reduction in pain, particularly in the neck, shoulders, lower back, legs, and hips."
         },
         {
           title: "Improve Circulation",
-          description: "Stimulates blood flow to treated areas, promoting healing and recovery."
+          description: "Insertion of the needle causes a brief micro response within the tissues, increasing blood flow and supporting recovery."
         },
         {
-          title: "Enhance Range of Motion",
-          description: "Helps restore normal movement by releasing muscular restrictions."
+          title: "Restore Range of Motion",
+          description: "Releasing muscular restrictions helps improve flexibility and freedom of movement, which is especially beneficial for athletes and individuals recovering from injury."
         },
         {
-          title: "Complement Massage Therapy",
-          description: "Can be combined with massage for enhanced therapeutic outcomes."
+          title: "Enhance the Effects of Massage",
+          description: "Dry needling can be combined with massage therapy to speed up results, reduce stubborn tension, and support long term rehabilitation."
         }
       ]}
       whatToExpect={{
         description: [
-          "Your dry needling session begins with an assessment to identify trigger points and areas of concern. Fine, sterile needles are then inserted into specific points to target muscle tightness and pain. The treatment is generally well-tolerated, with minimal discomfort."
+          "Your session begins with a detailed assessment to understand your symptoms, lifestyle, and movement. This ensures your treatment plan is tailored to your needs and focuses on the areas that will provide the greatest improvement.",
+          "Appointments take place in our quiet and private treatment room on Bristol Road, with flexible availability including evenings and weekends."
         ],
         includes: [
-          "Comprehensive assessment of trigger points",
-          "Strategic needle placement",
-          "Safe, sterile technique",
-          "Post-treatment guidance",
-          "Option to combine with massage therapy"
+          "Comprehensive assessment of problem areas",
+          "Identification of trigger points and muscular restrictions",
+          "Safe and sterile dry needling technique using single use needles",
+          "Clear communication throughout every step",
+          "Post treatment guidance to maximise your results",
+          "Option to combine dry needling with sports massage"
         ]
       }}
       whoCanBenefit={{
-        intro: "Dry needling is beneficial for:",
+        intro: "Our specialist dry needling in Dudley is an effective treatment for a wide range of clients, including:",
         list: [
-          "Individuals with chronic muscle pain",
-          "People experiencing muscle knots or trigger points",
-          "Those with limited range of motion",
-          "Athletes with persistent muscle tightness",
-          "Anyone seeking alternative pain relief",
-          "Clients looking to enhance massage therapy results"
+          "Individuals with chronic muscular pain",
+          "Clients experiencing tight knots or trigger points",
+          "Athletes managing high training demands",
+          "People with limited range of motion",
+          "Anyone recovering from injury or overuse",
+          "Clients seeking a natural and drug free form of pain relief",
+          "Those wanting to enhance the results of massage therapy"
         ],
-        conclusion: "If you're dealing with persistent muscle tightness or pain that hasn't responded to other treatments, dry needling may provide the relief you need."
+        conclusion: "If you have pain that has not improved with other treatments, dry needling may be a suitable alternative."
       }}
       trustSection={{
-        description: "Our dry needling is performed by an NHS-qualified therapist with specialized training in this technique. We use only sterile, single-use needles and follow strict safety protocols.",
+        description: "Your treatment is carried out by an NHS qualified therapist with nearly 10 years of clinical experience in orthopaedics, neurology, trauma, respiratory care, vascular surgery, and community rehabilitation. This ensures a high level of professional knowledge, safety, and personalised care.",
         points: [
-          "Safe, sterile technique with single-use needles",
-          "Experienced, qualified practitioner",
-          "Comfortable, professional environment",
-          "Clear communication throughout treatment"
+          "Professional dry needling with sterile single use needles",
+          "Strong clinical background and extensive NHS training",
+          "Nearly 10 years of treating complex injuries and movement issues",
+          "Over 180 verified five star Google reviews",
+          "Bupa partnership",
+          "Honest communication with no unnecessary treatments",
+          "Flexible appointment times in a private home based clinic"
         ]
       }}
       faq={[
         {
           question: "Does dry needling hurt?",
-          answer: "Most clients experience minimal discomfort. You may feel a slight sensation when the needle enters, and sometimes a brief muscle twitch, which is normal and indicates the trigger point has been located."
+          answer: "Most clients experience minimal discomfort. You may feel a brief sensation as the needle enters or a short muscle twitch. This is normal and indicates the trigger point has been activated."
         },
         {
           question: "How long does a session last?",
-          answer: "Sessions typically last 30-45 minutes, depending on the number of areas being treated."
+          answer: "A typical session lasts between 30 and 45 minutes depending on how many areas require treatment."
         },
         {
           question: "Can dry needling be combined with massage?",
-          answer: "Yes, dry needling can be combined with massage therapy for enhanced results. This is often recommended for comprehensive treatment."
+          answer: "Yes, combining dry needling with sports massage can increase the effectiveness of both treatments by releasing tension more deeply and supporting recovery."
         },
         {
           question: "How many sessions will I need?",
-          answer: "The number of sessions needed varies depending on your condition. Some clients experience relief after one session, while others may benefit from a series of treatments."
+          answer: "Some clients feel improvement after a single session, while others may benefit from a short course of treatments depending on the severity and duration of their symptoms."
         }
       ]}
       image="https://res.cloudinary.com/diydpxavd/image/upload/v1749591747/acupuncture_ybkipz.jpg"
       serviceSelectValue="acupuncture"
+      customHeadings={{
+        whyChoose: "Why Clients Choose Us For Dry Needling",
+        trustSection: "Why Choose Renew Body Therapy for Dry Needling Treatment in Dudley",
+        whatToExpect: "What To Expect During Your Dry Needling Session",
+        cta: "Book Your Dry Needling Treatment in Dudley",
+        ctaDescription: "If you are ready to reduce muscle tightness, relieve pain, and restore comfortable movement, book your dry needling appointment today. Our NHS trained therapist will guide you through a personalised plan designed to help you feel and move better."
+      }}
     />
   );
 }

@@ -3,101 +3,124 @@ import ServicePageTemplate from './ServicePageTemplate';
 function OccupationalTherapy() {
   return (
     <ServicePageTemplate
-      title="Occupational Therapy in Dudley"
+      title="Supportive Occupational Therapy in Dudley"
       metaTitle="Occupational Therapy in Dudley | Renew Body Therapy"
-      metaDescription="In-home occupational therapy in Dudley | NHS experienced therapist | Functional support & rehabilitation | Book today →"
+      metaDescription="In-home occupational therapy in Dudley for mobility, rehabilitation & daily living support | NHS qualified occupational therapist | Book your assessment →"
       intro={[
-        "With nearly ten years of NHS occupational therapy experience, we provide expert in-home OT services including mobility support, functional assessments, post-injury rehabilitation, and personalised exercise plans. This service is ideal for clients recovering from fractures, surgery, or long-term conditions affecting daily life.",
-        "Our occupational therapy focuses on helping you regain independence and function in your daily activities, supporting your recovery and improving your quality of life."
+        "If you or a loved one is recovering from injury, surgery, illness, or a long-term condition that affects daily life, our occupational therapy in Dudley provides practical, safe, and supportive rehabilitation in the comfort of your own home. With nearly ten years of NHS clinical experience, our occupational therapist focuses on restoring independence, improving mobility, increasing confidence, and helping you manage everyday activities with greater ease.",
+        "Our service supports clients across Dudley, Netherton, Brierley Hill, Stourbridge, Sedgley, and surrounding areas. Whether you need help with mobility, personal care, home tasks, returning to work, or recovery after hospital discharge, you will receive patient centred care tailored to your goals."
       ]}
       whyChoose={[
         "Nearly 10 years of NHS occupational therapy experience",
-        "In-home service for your convenience",
-        "Focus on functional independence",
-        "Personalized treatment plans",
-        "Support for daily living activities",
-        "Compassionate, patient-centered approach"
+        "In-home treatment for convenience and comfort",
+        "Focus on functional independence and daily living skills",
+        "Personalised rehabilitation plans",
+        "Mobility and transfer support",
+        "Compassionate and practical approach to recovery"
       ]}
       prices={[
         "60 mins - £55"
       ]}
       whatIs={[
-        "Occupational therapy helps people regain independence and function in their daily activities. Our service focuses on supporting recovery from injury, surgery, or long-term conditions by addressing the practical skills needed for daily living.",
-        "With extensive NHS experience, our occupational therapist understands how to help you overcome challenges and regain confidence in your daily activities, whether that's personal care, household tasks, or returning to work."
+        "Occupational therapy helps people rebuild the skills and confidence needed for everyday living. It focuses on improving function rather than simply treating symptoms. This makes it essential for clients who want to regain independence, mobility, or the ability to carry out meaningful activities.",
+        "Our work often involves:",
+        "• Supporting recovery after fractures, surgery, or illness",
+        "• Improving mobility and reducing risk of falls",
+        "• Enhancing independence with daily tasks",
+        "• Addressing cognitive or physical challenges",
+        "• Helping clients adapt to long term or chronic conditions",
+        "• Assessing home environments for safety and accessibility",
+        "Occupational therapy is a key part of occupational health in Dudley and supports clients returning to normal routines, work duties, or community activity.",
+        "To learn more about our full range of services, visit our dedicated page."
       ]}
       benefits={[
         {
           title: "Regain Independence",
-          description: "Support to regain independence in daily activities and personal care."
+          description: "We support you with personal care, household tasks, community access, and the activities that matter most in your daily routine."
         },
         {
           title: "Functional Recovery",
-          description: "Focus on practical skills needed for daily living and work."
+          description: "Therapy sessions focus on practical skills needed for daily living, mobility, and safe movement, helping you return to your usual roles."
         },
         {
           title: "Mobility Support",
-          description: "Assessment and support for safe mobility and movement."
+          description: "We assess balance, gait, transfers, and functional movement, providing exercises and strategies to help you move safely and confidently."
         },
         {
           title: "Adaptive Strategies",
-          description: "Techniques and adaptations to help you manage daily tasks."
+          description: "We teach techniques and coping methods that make everyday tasks easier to manage, especially after injury or during long term conditions."
         },
         {
           title: "Confidence Building",
-          description: "Support to rebuild confidence in your abilities."
+          description: "Rehabilitation is not only physical. Our patient centred approach helps rebuild confidence, reduce fear of movement, and support long term recovery."
         }
       ]}
       whatToExpect={{
         description: [
-          "Your occupational therapy program begins with a comprehensive assessment of your functional abilities, daily activities, and goals. We'll work together to create a personalized plan that addresses your specific needs."
+          "Our experienced occupational therapist in Dudley always begins with a detailed assessment of how you move, how you manage tasks, and what challenges you face in daily life. This is carried out in your home so we can fully understand your environment, routines, and specific needs.",
+          "Our goal is to help you regain independence safely and comfortably."
         ],
         includes: [
           "Comprehensive functional assessment",
-          "Activities of daily living support",
-          "Mobility and transfer training",
-          "Personalized exercise program",
-          "Adaptive equipment recommendations",
-          "Home safety assessment",
-          "Progress monitoring and adjustments"
+          "Daily living activities support",
+          "Mobility and safe transfer training",
+          "Tailored exercise plans for strength and confidence",
+          "Recommendations for adaptive equipment",
+          "Home safety assessment to reduce risks",
+          "Progress tracking and regular adjustments to your plan"
         ]
       }}
       whoCanBenefit={{
-        intro: "Occupational therapy is beneficial for:",
+        intro: "Our occupational therapy is suitable for:",
         list: [
-          "Clients recovering from fractures or surgery",
-          "Individuals with long-term conditions affecting function",
-          "People needing support with daily activities",
-          "Those recovering from injury",
-          "Older adults wanting to maintain independence",
-          "Anyone seeking functional rehabilitation"
+          "Clients recovering from fractures or joint replacements",
+          "Individuals recovering from surgery or hospital stays",
+          "People with long term conditions affecting movement or function",
+          "Older adults wanting to stay independent at home",
+          "Clients experiencing weakness, mobility issues, or reduced confidence",
+          "Anyone needing support with daily activities or rehabilitation",
+          "Those needing functional assessments for occupational health in Dudley"
         ],
-        conclusion: "If you're facing challenges with daily activities, our occupational therapy can help you regain function and independence."
+        conclusion: "If daily tasks have become difficult, occupational therapy can help you return to a safer and more independent lifestyle."
       }}
       trustSection={{
-        description: "Our occupational therapy is delivered by an NHS-qualified occupational therapist with nearly ten years of experience. We understand the importance of functional recovery and provide compassionate, practical support.",
+        description: "Our occupational therapy is provided by an NHS-qualified therapist with nearly a decade of experience across orthopaedics, stroke, neurology, respiratory care, cardiology, vascular surgery, and community rehabilitation. This depth of knowledge allows us to assess complex conditions and create practical treatment plans that genuinely improve daily function.",
         points: [
-          "Extensive NHS experience",
-          "Focus on practical, functional outcomes",
-          "Patient-centered approach",
-          "In-home service available"
+          "Strong NHS clinical background",
+          "Focus on functional and meaningful outcomes",
+          "Patient centred support throughout your recovery",
+          "In home visits for accurate assessment and convenience",
+          "Honest and transparent guidance",
+          "A caring and compassionate approach"
         ]
       }}
       faq={[
         {
-          question: "What's the difference between physiotherapy and occupational therapy?",
-          answer: "Physiotherapy focuses on movement and physical function, while occupational therapy focuses on helping you perform daily activities and tasks. They often work together."
+          question: "What is the difference between physiotherapy and occupational therapy?",
+          answer: "Physiotherapy focuses on movement, strength, and physical rehabilitation. Occupational therapy focuses on helping you perform the tasks and daily activities that are important in your everyday life. Both roles complement each other and are often used together in recovery."
         },
         {
           question: "Can sessions be done at home?",
-          answer: "Yes, our occupational therapy service is primarily home-based, allowing us to assess and treat you in your actual living environment."
+          answer: "Yes. Our mobile occupational therapy service is primarily home-based, so we can assess your environment properly and support you in the space where you carry out your daily tasks."
         },
         {
           question: "How long does treatment take?",
-          answer: "Treatment duration varies based on individual needs and goals. We create personalized programs and adjust them as you progress."
+          answer: "The duration varies based on your condition, goals, and progress. We create personalised plans and adjust them regularly to support the best possible recovery."
+        },
+        {
+          question: "Is occupational therapy suitable for older adults?",
+          answer: "Yes. Occupational therapy is ideal for older adults who want to maintain independence, reduce falls risk, improve mobility, or manage long term conditions safely."
         }
       ]}
       image="https://res.cloudinary.com/diydpxavd/image/upload/v1749591753/occupational_ghxf7i.jpg"
       serviceSelectValue="occupational"
+      customHeadings={{
+        whyChoose: "Why People Choose Our Occupational Therapy",
+        trustSection: "Why Choose Renew Body Therapy for Occupational Therapy in Dudley",
+        whatToExpect: "What To Expect During Your Occupational Therapy Session",
+        cta: "Book Your Occupational Therapy in Dudley",
+        ctaDescription: "If you are ready to regain independence, rebuild confidence, and improve your daily function, book your occupational therapy assessment today. Our NHS trained therapist will support you with a tailored plan built around your needs."
+      }}
     />
   );
 }

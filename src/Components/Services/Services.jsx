@@ -22,7 +22,7 @@ function Services() {
       image: 'https://res.cloudinary.com/diydpxavd/image/upload/v1749591748/deep-tissue_qza6dp.jpg',
       prices: [
         "Full Body (60 mins) - £45",
-        "Additional Service - Accupuncture  - £15"
+        "Additional Service - Dry Needling - £15"
       ],
       description: `<p>This treatment focuses on releasing chronic muscular tension, alleviating tightness, and addressing deeper layers of soft tissue. It is ideal for clients with ongoing back, neck, or shoulder pain, or for individuals dealing with stress-related muscular tightness.</p><p>Sessions are delivered in our home clinic, providing a quiet environment that allows for complete relaxation while still delivering focused therapeutic work.</p>`,
       selectValue: "deep-tissue"
@@ -42,9 +42,9 @@ function Services() {
       prices: [
         "60 mins - £45",
         "Additional Service - Cupping - £5",
-        "Additional Service - Accupuncture  - £15"
+        "Additional Service - Dry Needling - £15"
       ],
-      description: `<p>Sports massage targets specific muscle groups to support recovery, enhance mobility, and prevent injury. It is ideal for athletes, gym goers, or anyone managing activity related tension.</p><p><strong>Add ons:</strong></p><ul><li>Cupping therapy</li><li>Dry needling or acupuncture style treatment</li></ul>`,
+      description: `<p>Sports massage targets specific muscle groups to support recovery, enhance mobility, and prevent injury. It is ideal for athletes, gym goers, or anyone managing activity related tension.</p><p><strong>Add ons:</strong></p><ul><li>Cupping therapy</li><li>Dry needling</li></ul>`,
       selectValue: "sports"
     },    
     {
@@ -111,7 +111,7 @@ function Services() {
         selectValue: "vitamin-b12"
     },
     {
-      title: "ACUPUNCTURE/DRY NEEDLING",
+      title: "DRY NEEDLING",
       image: 'https://res.cloudinary.com/diydpxavd/image/upload/v1749591747/acupuncture_ybkipz.jpg',
       prices: [
         "£45"

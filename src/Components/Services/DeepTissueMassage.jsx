@@ -20,7 +20,7 @@ function DeepTissueMassage() {
       ]}
       prices={[
         "Full Body (60 mins) - £45",
-        "Additional Service - Acupuncture - £15"
+        "Additional Service - Dry Needling - £15"
       ]}
       whatIs={[
         "Deep tissue massage is a therapeutic technique that focuses on releasing chronic muscular tension by targeting the deeper layers of muscle and connective tissue. Unlike lighter massage styles, deep tissue massage applies firm pressure to break down knots and adhesions that can cause pain and limit mobility.",

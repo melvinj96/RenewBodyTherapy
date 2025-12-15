@@ -18,7 +18,8 @@ const ServicePageTemplate = ({
   contactInfo,
   image,
   prices,
-  serviceSelectValue
+  serviceSelectValue,
+  customHeadings
 }) => {
   useEffect(() => {
     document.title = metaTitle;
@@ -84,7 +85,7 @@ const ServicePageTemplate = ({
             <div className="mb-16">
               <div className="bg-white rounded-2xl shadow-lg p-8 sm:p-12 border border-gray-100">
                 <h2 className="text-3xl sm:text-4xl font-tertiary font-bold text-primary mb-6">
-                  Why Choose Our {title.split(' in ')[0]} Service?
+                  {customHeadings?.whyChoose || `Why Choose Our ${title.split(' in ')[0]} Service?`}
                 </h2>
                 <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {whyChoose && whyChoose.map((item, idx) => (
@@ -166,7 +167,7 @@ const ServicePageTemplate = ({
           {whatToExpect && (
             <div className="mb-16">
               <h2 className="text-3xl sm:text-4xl font-tertiary font-bold text-primary mb-6">
-                What to Expect During Your Session
+                {customHeadings?.whatToExpect || "What to Expect During Your Session"}
               </h2>
               <div className="bg-white rounded-xl p-8 shadow-md border border-gray-100">
                 {whatToExpect.description && (
@@ -178,7 +179,7 @@ const ServicePageTemplate = ({
                 )}
                 {whatToExpect.includes && (
                   <div>
-                    <p className="font-semibold text-primary mb-4">Your treatment includes:</p>
+                    <p className="font-semibold text-primary mb-4">Your personalised programme may include:</p>
                     <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
                       {whatToExpect.includes && whatToExpect.includes.map((item, idx) => (
                         <li key={idx} className="flex items-start gap-3">
@@ -259,7 +260,7 @@ const ServicePageTemplate = ({
           {trustSection && (
             <div className="mb-16">
               <h2 className="text-3xl sm:text-4xl font-tertiary font-bold text-primary mb-6">
-                Why You Can Trust Our {title.split(' in ')[0]} in Dudley
+                {customHeadings?.trustSection || `Why You Can Trust Our ${title.split(' in ')[0]} in Dudley`}
               </h2>
               <div className="bg-gradient-to-br from-primary/5 to-secondary/5 rounded-2xl p-8 sm:p-12 border border-gray-200">
                 {trustSection.description && (
@@ -314,10 +315,10 @@ const ServicePageTemplate = ({
           {/* CTA Section */}
           <div className="bg-gradient-to-r from-secondary to-secondary-light rounded-2xl p-8 sm:p-12 text-center text-white shadow-2xl">
             <h2 className="text-3xl sm:text-4xl font-tertiary font-bold mb-4">
-              Book Your {title.split(' in ')[0]} Today
+              {customHeadings?.cta || `Book Your ${title.split(' in ')[0]} Today`}
             </h2>
             <p className="text-lg mb-8 max-w-2xl mx-auto opacity-90">
-              Ready to experience the benefits? Contact us today to schedule your appointment.
+              {customHeadings?.ctaDescription || "Ready to experience the benefits? Contact us today to schedule your appointment."}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link
