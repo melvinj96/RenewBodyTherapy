@@ -4,6 +4,7 @@ import TitleBand from '../Titleband';
 
 const ServicePageTemplate = ({
   title,
+  secondaryTitle,
   metaTitle,
   metaDescription,
   intro,
@@ -21,6 +22,8 @@ const ServicePageTemplate = ({
   serviceSelectValue,
   customHeadings
 }) => {
+  // Use secondaryTitle for headings, fallback to title if not provided
+  const headingTitle = secondaryTitle || title;
   useEffect(() => {
     document.title = metaTitle;
     const metaDescriptionTag = document.querySelector('meta[name="description"]');
@@ -85,7 +88,7 @@ const ServicePageTemplate = ({
             <div className="mb-16">
               <div className="bg-white rounded-2xl shadow-lg p-8 sm:p-12 border border-gray-100">
                 <h2 className="text-3xl sm:text-4xl font-tertiary font-bold text-primary mb-6">
-                  {customHeadings?.whyChoose || `Why Choose Our ${title.split(' in ')[0]} Service?`}
+                  {customHeadings?.whyChoose || `Why Choose Our ${headingTitle.split(' in ')[0]} Service?`}
                 </h2>
                 <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {whyChoose && whyChoose.map((item, idx) => (
@@ -102,16 +105,37 @@ const ServicePageTemplate = ({
                 {prices && (
                   <div className="mt-8 pt-8 border-t border-gray-200">
                     <h3 className="text-xl font-tertiary font-bold text-primary mb-4">Pricing</h3>
-                    <ul className="space-y-2">
-                      {prices && prices.map((price, idx) => (
-                        <li key={idx} className="text-lg text-gray-700">
-                          {price}
-                        </li>
-                      ))}
+                    <ul className="space-y-4">
+                      {prices && prices.map((price, idx) => {
+                        // Support both string and object formats
+                        const priceText = typeof price === 'string' ? price : price.text;
+                        const priceDescription = typeof price === 'object' ? price.description : null;
+                        const learnMoreLink = typeof price === 'object' ? price.learnMoreLink : null;
+                        
+                        return (
+                          <li key={idx} className="text-lg text-gray-700">
+                            <div className="mb-2">{priceText}</div>
+                            {priceDescription && (
+                              <p className="text-base text-gray-600 mt-2 mb-2">{priceDescription}</p>
+                            )}
+                            {learnMoreLink && (
+                              <Link
+                                to={learnMoreLink}
+                                className="inline-block mt-2 text-secondary hover:text-secondary-dark font-semibold text-sm hover:underline"
+                              >
+                                Learn More →
+                              </Link>
+                            )}
+                          </li>
+                        );
+                      })}
                     </ul>
                   </div>
                 )}
                 <div className="mt-8 pt-8 border-t border-gray-200">
+                  <h2 className="text-2xl sm:text-3xl font-tertiary font-bold text-primary mb-6">
+                    Book Your Appointment Today
+                  </h2>
                   <div className="flex flex-wrap gap-4 text-sm sm:text-base text-gray-600">
                     <p><strong>Call:</strong> <a href="tel:07401261289" className="text-secondary hover:underline">07401 261289</a></p>
                     <p><strong>Email:</strong> <a href="mailto:jikku2006@gmail.com" className="text-secondary hover:underline">jikku2006@gmail.com</a></p>
@@ -134,7 +158,7 @@ const ServicePageTemplate = ({
           {whatIs && (
             <div className="mb-16">
               <h2 className="text-3xl sm:text-4xl font-tertiary font-bold text-primary mb-6">
-                What Is {title.split(' in ')[0]}?
+                What Is {headingTitle.split(' in ')[0]}?
               </h2>
               <div className="space-y-4 text-base sm:text-lg text-gray-700 leading-relaxed">
                 {whatIs && whatIs.map((paragraph, idx) => (
@@ -148,7 +172,7 @@ const ServicePageTemplate = ({
           {benefits && (
             <div className="mb-16">
               <h2 className="text-3xl sm:text-4xl font-tertiary font-bold text-primary mb-8">
-                The Benefits of {title.split(' in ')[0]}
+                The Benefits of {headingTitle.split(' in ')[0]}
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {benefits && benefits.map((benefit, idx) => (
@@ -205,6 +229,14 @@ const ServicePageTemplate = ({
                   </div>
                 )}
               </div>
+              <div className="mt-8 text-center">
+                <Link
+                  to={serviceSelectValue ? `/Contact?service=${encodeURIComponent(serviceSelectValue)}` : "/Contact"}
+                  className="inline-block bg-secondary hover:bg-secondary-dark text-white font-semibold px-8 py-4 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+                >
+                  Book Appointment
+                </Link>
+              </div>
             </div>
           )}
 
@@ -212,7 +244,7 @@ const ServicePageTemplate = ({
           {whenToGet && (
             <div className="mb-16">
               <h2 className="text-3xl sm:text-4xl font-tertiary font-bold text-primary mb-6">
-                When Should You Get {title.split(' in ')[0]}?
+                When Should You Get {headingTitle.split(' in ')[0]}?
               </h2>
               <div className="space-y-6">
                 {whenToGet && whenToGet.map((item, idx) => (
@@ -231,7 +263,7 @@ const ServicePageTemplate = ({
           {whoCanBenefit && (
             <div className="mb-16">
               <h2 className="text-3xl sm:text-4xl font-tertiary font-bold text-primary mb-6">
-                Who Can Benefit from {title.split(' in ')[0]}?
+                Who Can Benefit from {headingTitle.split(' in ')[0]}?
               </h2>
               <div className="bg-white rounded-xl p-8 shadow-md border border-gray-100">
                 {whoCanBenefit.intro && (
@@ -253,6 +285,14 @@ const ServicePageTemplate = ({
                   <p className="text-base sm:text-lg text-gray-700 mt-6">{whoCanBenefit.conclusion}</p>
                 )}
               </div>
+              <div className="mt-8 text-center">
+                <Link
+                  to={serviceSelectValue ? `/Contact?service=${encodeURIComponent(serviceSelectValue)}` : "/Contact"}
+                  className="inline-block bg-primary hover:bg-primary-dark text-white font-semibold px-8 py-4 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+                >
+                  Talk to an Expert
+                </Link>
+              </div>
             </div>
           )}
 
@@ -260,7 +300,7 @@ const ServicePageTemplate = ({
           {trustSection && (
             <div className="mb-16">
               <h2 className="text-3xl sm:text-4xl font-tertiary font-bold text-primary mb-6">
-                {customHeadings?.trustSection || `Why You Can Trust Our ${title.split(' in ')[0]} in Dudley`}
+                {customHeadings?.trustSection || `Why You Can Trust Our ${headingTitle.split(' in ')[0]} in Dudley`}
               </h2>
               <div className="bg-gradient-to-br from-primary/5 to-secondary/5 rounded-2xl p-8 sm:p-12 border border-gray-200">
                 {trustSection.description && (
@@ -306,6 +346,16 @@ const ServicePageTemplate = ({
                       {item.question}
                     </h4>
                     <p className="text-gray-700">{item.answer}</p>
+                    {item.learnMoreLink && (
+                      <div className="mt-4">
+                        <Link
+                          to={item.learnMoreLink}
+                          className="inline-block text-secondary hover:text-secondary-dark font-semibold text-sm hover:underline"
+                        >
+                          Learn More →
+                        </Link>
+                      </div>
+                    )}
                   </div>
                 ))}
               </div>
@@ -315,7 +365,7 @@ const ServicePageTemplate = ({
           {/* CTA Section */}
           <div className="bg-gradient-to-r from-secondary to-secondary-light rounded-2xl p-8 sm:p-12 text-center text-white shadow-2xl">
             <h2 className="text-3xl sm:text-4xl font-tertiary font-bold mb-4">
-              {customHeadings?.cta || `Book Your ${title.split(' in ')[0]} Today`}
+              {customHeadings?.cta || `Book Your ${headingTitle.split(' in ')[0]} Today`}
             </h2>
             <p className="text-lg mb-8 max-w-2xl mx-auto opacity-90">
               {customHeadings?.ctaDescription || "Ready to experience the benefits? Contact us today to schedule your appointment."}
