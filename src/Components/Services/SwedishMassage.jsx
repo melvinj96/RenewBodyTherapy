@@ -19,7 +19,7 @@ function SwedishMassage() {
         "Affordable pricing for regular sessions"
       ]}
       prices={[
-        "Full Body (60 mins) - £40"
+        "Full Body (60 mins) - £45"
       ]}
       whatIs={[
         "Swedish massage is a gentle and relaxing treatment that uses long, flowing strokes, kneading, and circular movements to promote relaxation and improve circulation. It's one of the most popular massage styles and is perfect for those new to massage therapy or seeking a gentle, restorative experience.",

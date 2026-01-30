@@ -31,7 +31,7 @@ function Services() {
       title: "SWEDISH MASSAGE",
       image: 'https://res.cloudinary.com/diydpxavd/image/upload/v1749591763/swedish_nqcbj4.jpg',
       prices: [
-        "Full Body (60 mins) - £40"
+        "Full Body (60 mins) - £45"
       ],
       description: `<p>Swedish massage is a gentle and relaxing treatment designed to improve circulation, reduce stress, and support overall well-being. It is suitable for all ages and is an excellent choice for clients seeking a calming and restorative session.</p>`,
       selectValue: "swedish"
@@ -237,7 +237,7 @@ function Services() {
                     rel="noopener noreferrer"
                     className="text-secondary hover:underline"
                   >
-                    Over 180 five-star Google reviews from local clients
+                    Over 200 five-star Google reviews from local clients
                   </a>
                 </span>
               </li>
