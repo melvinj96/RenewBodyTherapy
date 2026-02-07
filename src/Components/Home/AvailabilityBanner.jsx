@@ -10,7 +10,7 @@ const AvailabilityBanner = () => {
     const unavailableRanges = [
       {
         startDate: new Date('2026-01-21'),
-        endDate: new Date('2026-02-10'),
+        endDate: new Date('2026-02-05'),
         message: 'No appointments will be available between 1st February and 5th February, 2026, however I am still continuing to accept bookings for other dates. Thank you for your understanding.'
       }
       // Add more date ranges as needed
