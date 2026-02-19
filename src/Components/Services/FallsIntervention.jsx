@@ -3,7 +3,7 @@ import ServicePageTemplate from './ServicePageTemplate';
 function FallsIntervention() {
   return (
     <ServicePageTemplate
-      title="Falls Intervention in Dudley"
+      title="Professional Prevention & Intervention of Falls in Dudley"
       metaTitle="Prevention & Intervention of Falls in Dudley | Renew Body Therapy"
       metaDescription="Specialist falls intervention in Dudley | Improve balance & confidence | Prevent falls | NHS qualified therapist | Book today →"
       intro={[
@@ -87,6 +87,10 @@ function FallsIntervention() {
           "Orthopaedics",
           "Post-surgical recovery",
           "Mobility and functional independence support"
+        ],
+        outro: [
+          "We understand both the physical and emotional impact of falls. Our approach is calm, supportive, and evidence-based, ensuring you feel safe throughout the rehabilitation process.",
+          "Clients across the local area trust Renew Body Therapy for professional recovery after a fall."
         ]
       }}
       faq={[

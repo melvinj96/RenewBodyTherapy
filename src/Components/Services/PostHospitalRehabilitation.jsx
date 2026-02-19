@@ -3,7 +3,7 @@ import ServicePageTemplate from './ServicePageTemplate';
 function PostHospitalRehabilitation() {
   return (
     <ServicePageTemplate
-      title="Post-Hospital Rehabilitation in Dudley"
+      title="Post-Hospital Rehabilitation in Dudley - Discharge Recovery Treatments"
       metaTitle="Post-Hospital Rehabilitation in Dudley | Renew Body Therapy"
       metaDescription="Expert post-hospital discharge rehabilitation in Dudley to restore mobility, strength & independence | NHS-qualified therapist | Home visits available →"
       intro={[
@@ -80,14 +80,19 @@ function PostHospitalRehabilitation() {
         conclusion: "If you are unsure whether you need rehabilitation, early assessment can prevent longer-term setbacks."
       }}
       trustSection={{
-        description: "Our clinical background ensures your rehabilitation plan is safe, realistic, and grounded in evidence-based practice. We understand the physical and emotional impact of returning home after hospitalisation. Our approach is calm, supportive, and structured - helping you progress at a pace that feels achievable. Clients trust Renew Body Therapy for professional and compassionate home rehabilitation support.Your recovery is delivered by an NHS-qualified occupational therapist with experience across:",
+        description: "Your recovery is delivered by an NHS-qualified occupational therapist with experience across:",
         points: [
           "Trauma and orthopaedics",
           "Stroke and neurology",
           "Respiratory and cardiology care",
           "General and vascular surgery",
           "Community rehabilitation services"
-        ]
+        ],
+        outro: [
+          "This clinical background ensures your rehabilitation plan is safe, realistic, and grounded in evidence-based practice.",
+          "We understand the physical and emotional impact of returning home after hospitalisation. Our approach is calm, supportive, and structured - helping you progress at a pace that feels achievable.",
+          "Clients trust Renew Body Therapy for professional and compassionate home rehabilitation support."
+        ] 
       }}
       faq={[
         {

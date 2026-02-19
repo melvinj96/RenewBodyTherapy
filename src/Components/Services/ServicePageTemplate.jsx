@@ -320,6 +320,18 @@ const ServicePageTemplate = ({
                     ))}
                   </ul>
                 )}
+                {trustSection.outro && (
+                  <div className="space-y-4 mb-6">
+                    {Array.isArray(trustSection.outro)
+                      ? trustSection.outro.map((paragraph, idx) => (
+                          <p key={idx} className="text-base sm:text-lg text-gray-700">
+                            {paragraph}
+                          </p>
+                        ))
+                      : <p className="text-base sm:text-lg text-gray-700">{trustSection.outro}</p>
+                    }
+                  </div>
+                )}
                 {trustSection.links && (
                   <p className="text-base sm:text-lg text-gray-700">
                     <strong>
