@@ -8,6 +8,8 @@ import GoogleMapComponent from '../Shared/GoogleMapComponent';
 import '../../assets/css/Contact.css';
 import Select from 'react-select';
 
+const recaptchaSiteKey = process.env.REACT_APP_RECAPTCHA_SITE_KEY;
+
 function Contact() {
     const [formData, setFormData] = useState({
         firstName: '',
@@ -201,7 +203,7 @@ function Contact() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         
-        if (!captchaValue) {
+        if (recaptchaSiteKey && !captchaValue) {
             setAlert({
                 show: true,
                 message: 'Please verify that you are human',
@@ -248,7 +250,7 @@ function Contact() {
                 },
                 body: JSON.stringify({
                     ...formData,
-                    captchaToken: captchaValue,
+                    captchaToken: captchaValue || undefined,
                     disclaimer
                 })
             });
@@ -619,14 +621,34 @@ function Contact() {
                                     <p><b>You should note that if the therapist is unable to explain to you the contraindications or is unsure of anything that may apply to a specific condition then they should not treat you without asking you to consult with your GP or Consultant. It is your responsibility and not that of the therapist to consult your GP or Consultant.</b></p>
                                 </div>
                             </div>
-                            <div className="form-row">
-                                <div className="form-group">
-                                    <ReCAPTCHA
-                                        sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
-                                        onChange={handleCaptchaChange}
-                                    />
+                            {recaptchaSiteKey ? (
+                                <div className="form-row">
+                                    <div className="form-group colspan-2">
+                                        <ReCAPTCHA sitekey={recaptchaSiteKey} onChange={handleCaptchaChange} />
+                                    </div>
                                 </div>
-                            </div>
+                            ) : process.env.NODE_ENV === 'development' ? (
+                                <div className="form-row">
+                                    <div className="form-group colspan-2">
+                                        <p
+                                            style={{
+                                                margin: 0,
+                                                padding: '0.75rem 1rem',
+                                                fontSize: '0.9rem',
+                                                color: '#555',
+                                                background: '#fff8e6',
+                                                border: '1px solid #e6d9a3',
+                                                borderRadius: '8px',
+                                            }}
+                                        >
+                                            <strong>Development:</strong> reCAPTCHA is disabled because{' '}
+                                            <code>REACT_APP_RECAPTCHA_SITE_KEY</code> is not set. Add it to{' '}
+                                            <code>.env.local</code> to test the widget locally. Production builds should
+                                            always define this key in your host environment.
+                                        </p>
+                                    </div>
+                                </div>
+                            ) : null}
                             <div style={{ display: 'none' }}>
                                 <input
                                     type="text"

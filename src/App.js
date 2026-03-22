@@ -18,6 +18,9 @@ import MobilePhysiotherapy from './Components/Services/MobilePhysiotherapy';
 import OccupationalTherapy from './Components/Services/OccupationalTherapy';
 import VitaminB12 from './Components/Services/VitaminB12';
 import Gallery from './Components/Gallery/Gallery';
+import Blogs from './Components/Blogs/Blogs';
+import { blogPosts } from './data/blogPosts';
+import InsurancePartners from './Components/InsurancePartners/InsurancePartners';
 import Testimonials from './Components/Testimonials/Testimonials';
 import Contact from './Components/Contact/Contact';
 import Awards from './Components/Awards/Awards';
@@ -44,8 +47,13 @@ function App() {
           <Route path="/services/mobile-physiotherapy" element={<MobilePhysiotherapy />} />
           <Route path="/services/occupational-therapy" element={<OccupationalTherapy />} />
           <Route path="/services/vitamin-b12" element={<VitaminB12 />} />
+          <Route path="/blogs" element={<Blogs />} />
+          {blogPosts.map(({ slug, Component }) => (
+            <Route key={slug} path={`/blogs/${slug}`} element={<Component />} />
+          ))}
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/testimonials" element={<Testimonials />} />
+          <Route path="/insurance-partners" element={<InsurancePartners />} />
           <Route path="/awards" element={<Awards />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>

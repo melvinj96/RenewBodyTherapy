@@ -33,6 +33,10 @@ const Navbar = () => {
   };
 
   const isActive = (path) => {
+    if (path === '/') return location.pathname === '/';
+    if (path === '/blogs') {
+      return location.pathname === '/blogs' || location.pathname.startsWith('/blogs/');
+    }
     return location.pathname === path;
   };
 
@@ -67,8 +71,16 @@ const Navbar = () => {
         { path: '/services/vitamin-b12', label: 'Vitamin B12 Injections' },
       ]
     },
+    { path: '/blogs', label: 'Blogs', submenu: [
+      { path: '/blogs/black-country-half-marathon', label: 'Black Country Half Marathon' },
+    ] },
     { path: '/gallery', label: 'Gallery' },
     { path: '/testimonials', label: 'Testimonials' },
+    {
+      path: '/insurance-partners',
+      label: 'Insurance Partners',
+      navLabel: 'Insurance',
+    },
     { path: '/awards', label: 'Awards' },
     { path: '/contact', label: 'Contact' }
   ];
@@ -97,12 +109,12 @@ const Navbar = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-8">
-            <div className="flex items-center gap-6">
+          <div className="hidden lg:flex items-center gap-6 xl:gap-8">
+            <div className="flex flex-nowrap items-center gap-4 xl:gap-5">
               {navItems.map((item) => (
                 <div 
                   key={item.path} 
-                  className="relative group"
+                  className="relative shrink-0 group"
                   onMouseEnter={() => item.submenu && setOpenSubmenu(item.path)}
                   onMouseLeave={() => item.submenu && setOpenSubmenu(null)}
                 >
@@ -110,13 +122,13 @@ const Navbar = () => {
                     <>
                       <Link
                         to={item.path}
-                        className={`relative px-3 py-2 text-sm font-primary font-medium transition-all duration-300 ${
+                        className={`relative whitespace-nowrap px-2 py-2 text-sm font-primary font-medium transition-all duration-300 xl:px-2.5 ${
                           isActive(item.path)
                             ? 'text-white'
                             : 'text-secondary hover:text-white'
                         }`}
                       >
-                        {item.label}
+                        {item.navLabel ?? item.label}
                         {isActive(item.path) && (
                           <span className="absolute bottom-0 left-0 w-full h-0.5 bg-secondary"></span>
                         )}
@@ -148,13 +160,13 @@ const Navbar = () => {
                   ) : (
                     <Link
                       to={item.path}
-                      className={`relative px-3 py-2 text-sm font-primary font-medium transition-all duration-300 ${
+                      className={`relative whitespace-nowrap px-2 py-2 text-sm font-primary font-medium transition-all duration-300 xl:px-2.5 ${
                         isActive(item.path)
                           ? 'text-white'
                           : 'text-secondary hover:text-white'
                       }`}
                     >
-                      {item.label}
+                      {item.navLabel ?? item.label}
                       {isActive(item.path) && (
                         <span className="absolute bottom-0 left-0 w-full h-0.5 bg-secondary transition-all duration-300"></span>
                       )}
