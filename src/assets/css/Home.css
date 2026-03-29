@@ -4,23 +4,6 @@
     flex-direction: column;
   }
 
-  .partner-banner {
-    background-color: #0E4B9B;
-    color: white;
-    padding: 0.5rem;
-    text-align: center;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: var(--font-tertiary);
-  }
-  
-  .partner-logo {
-    height: 30px;
-    margin-left: 0.4rem; /* Space between logo and text */
-  }
-
   .home-content-section {
     background-color: #fff;
     padding: 3rem 0;
