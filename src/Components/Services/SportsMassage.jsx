@@ -20,9 +20,9 @@ function SportsMassage() {
         "Tailored treatment to suit your goals and physical demands"
       ]}
       prices={[
-        "60 mins - £45",
+        "60 mins - £50",
         "Additional Service - Cupping - £5",
-        "Additional Service - Dry Needling - £15"
+        "Additional Service - Dry Needling - £10"
       ]}
       whatIs={[
         "Sports massage is a specialised form of massage therapy designed to support physical performance, relieve muscular tension, and accelerate recovery. It is ideal for athletes, fitness enthusiasts, and individuals who engage in physically demanding activities or repetitive strain through work or training.",
@@ -64,7 +64,7 @@ function SportsMassage() {
         ],
         addOns: [
           "Cupping therapy, £5",
-          "Dry needling addition, £15"
+          "Dry needling addition, £10"
         ]
       }}
       whenToGet={[
@@ -122,6 +122,7 @@ function SportsMassage() {
       ]}
       image="https://res.cloudinary.com/diydpxavd/image/upload/v1749591760/sports_nrw9bm.jpg"
       serviceSelectValue="sports"
+      showMassageThirdVisitOffer
     />
   );
 }

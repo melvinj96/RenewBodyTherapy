@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import TitleBand from '../Titleband';
 import ServiceCard from './ServiceCard';
+import MassageThirdVisitOffer, { isMassageThirdVisitOfferEligible } from './MassageThirdVisitOffer';
 
 function Services() {
   const navigate = useNavigate();
@@ -21,8 +22,8 @@ function Services() {
       title: "DEEP TISSUE MASSAGE",
       image: 'https://res.cloudinary.com/diydpxavd/image/upload/v1749591748/deep-tissue_qza6dp.jpg',
       prices: [
-        "Full Body (60 mins) - £45",
-        "Additional Service - Dry Needling - £15"
+        "Full Body (60 mins) - £50",
+        "Additional Service - Dry Needling - £10"
       ],
       description: `<p>This treatment focuses on releasing chronic muscular tension, alleviating tightness, and addressing deeper layers of soft tissue. It is ideal for clients with ongoing back, neck, or shoulder pain, or for individuals dealing with stress-related muscular tightness.</p><p>Sessions are delivered in our home clinic, providing a quiet environment that allows for complete relaxation while still delivering focused therapeutic work.</p>`,
       selectValue: "deep-tissue"
@@ -40,9 +41,9 @@ function Services() {
       title: "SPORTS MASSAGE",
       image: 'https://res.cloudinary.com/diydpxavd/image/upload/v1749591760/sports_nrw9bm.jpg',
       prices: [
-        "60 mins - £45",
+        "60 mins - £50",
         "Additional Service - Cupping - £5",
-        "Additional Service - Dry Needling - £15"
+        "Additional Service - Dry Needling - £10"
       ],
       description: `<p>Sports massage targets specific muscle groups to support recovery, enhance mobility, and prevent injury. It is ideal for athletes, gym goers, or anyone managing activity related tension.</p><p><strong>Add ons:</strong></p><ul><li>Cupping therapy</li><li>Dry needling</li></ul>`,
       selectValue: "sports"
@@ -196,6 +197,8 @@ function Services() {
           </p>
         </div>
 
+        <MassageThirdVisitOffer variant="banner" />
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {services.map((service, index) => (
             <ServiceCard
@@ -203,6 +206,7 @@ function Services() {
               service={service}
               onBook={() => handleBook(service)}
               servicePath={getServicePath(service.selectValue)}
+              showMassageOffer={isMassageThirdVisitOfferEligible(service.selectValue)}
             />
           ))}
         </div>

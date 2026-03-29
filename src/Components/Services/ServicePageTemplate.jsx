@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import TitleBand from '../Titleband';
+import MassageThirdVisitOffer, { isMassageThirdVisitOfferEligible } from './MassageThirdVisitOffer';
 
 const ServicePageTemplate = ({
   title,
@@ -20,7 +21,8 @@ const ServicePageTemplate = ({
   image,
   prices,
   serviceSelectValue,
-  customHeadings
+  customHeadings,
+  showMassageThirdVisitOffer
 }) => {
   // Use secondaryTitle for headings, fallback to title if not provided
   const headingTitle = secondaryTitle || title;
@@ -131,6 +133,9 @@ const ServicePageTemplate = ({
                       })}
                     </ul>
                   </div>
+                )}
+                {showMassageThirdVisitOffer && isMassageThirdVisitOfferEligible(serviceSelectValue) && (
+                  <MassageThirdVisitOffer variant="inline" />
                 )}
                 <div className="mt-8 pt-8 border-t border-gray-200">
                   <h2 className="text-2xl sm:text-3xl font-tertiary font-bold text-primary mb-6">

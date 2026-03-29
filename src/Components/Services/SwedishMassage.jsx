@@ -96,6 +96,7 @@ function SwedishMassage() {
       ]}
       image="https://res.cloudinary.com/diydpxavd/image/upload/v1749591763/swedish_nqcbj4.jpg"
       serviceSelectValue="swedish"
+      showMassageThirdVisitOffer
     />
   );
 }

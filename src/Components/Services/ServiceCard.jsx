@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
+import MassageThirdVisitOffer from './MassageThirdVisitOffer';
 
-function ServiceCard({ service, onBook, servicePath }) {
+function ServiceCard({ service, onBook, servicePath, showMassageOffer }) {
     return (
       <div className="group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100 hover:border-secondary/50 transform hover:-translate-y-2 flex flex-col h-full">
         <div className="relative overflow-hidden">
@@ -23,6 +24,8 @@ function ServiceCard({ service, onBook, servicePath }) {
               </p>
             ))}
           </div>
+
+          {showMassageOffer && <MassageThirdVisitOffer variant="card" />}
 
           <div className="flex gap-3 mt-auto">
             {servicePath ? (

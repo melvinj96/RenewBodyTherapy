@@ -21,9 +21,9 @@ function DeepTissueMassage() {
         "Evidence-based techniques for long-term relief"
       ]}
       prices={[
-        "Full Body (60 mins) - £45",
+        "Full Body (60 mins) - £50",
         {
-          text: "Additional Service - Dry Needling - £15",
+          text: "Additional Service - Dry Needling - £10",
           description: "Dry needling can be added to your session where appropriate to help release stubborn trigger points and enhance results.",
           learnMoreLink: "/services/acupuncture-dry-needling"
         }
@@ -129,6 +129,7 @@ function DeepTissueMassage() {
       ]}
       image="https://res.cloudinary.com/diydpxavd/image/upload/v1749591748/deep-tissue_qza6dp.jpg"
       serviceSelectValue="deep-tissue"
+      showMassageThirdVisitOffer
     />
   );
 }
