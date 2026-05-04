@@ -4,6 +4,7 @@ import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
 import Home from './Components/Home/Home';
 import About from './Components/About/About';
+import OurClinic from './Components/About/OurClinic';
 import Team from './Components/Team/Team';
 import Services from './Components/Services/Services';
 import SportsMassage from './Components/Services/SportsMassage';
@@ -15,6 +16,7 @@ import FallsIntervention from './Components/Services/FallsIntervention';
 import PostHospitalRehabilitation from './Components/Services/PostHospitalRehabilitation';
 import RespiratoryRehabilitation from './Components/Services/RespiratoryRehabilitation';
 import MobilePhysiotherapy from './Components/Services/MobilePhysiotherapy';
+import MusculoskeletalPhysiotherapy from './Components/Services/MusculoskeletalPhysiotherapy';
 import OccupationalTherapy from './Components/Services/OccupationalTherapy';
 import VitaminB12 from './Components/Services/VitaminB12';
 import Gallery from './Components/Gallery/Gallery';
@@ -34,6 +36,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/about/our-clinic" element={<OurClinic />} />
           <Route path="/team" element={<Team />} />
           <Route path="/services" element={<Services />} />
           <Route path="/services/sports-massage" element={<SportsMassage />} />
@@ -45,6 +48,7 @@ function App() {
           <Route path="/services/post-hospital-rehabilitation" element={<PostHospitalRehabilitation />} />
           <Route path="/services/respiratory-rehabilitation" element={<RespiratoryRehabilitation />} />
           <Route path="/services/mobile-physiotherapy" element={<MobilePhysiotherapy />} />
+          <Route path="/services/musculoskeletal-physiotherapy" element={<MusculoskeletalPhysiotherapy />} />
           <Route path="/services/occupational-therapy" element={<OccupationalTherapy />} />
           <Route path="/services/vitamin-b12" element={<VitaminB12 />} />
           <Route path="/blogs" element={<Blogs />} />

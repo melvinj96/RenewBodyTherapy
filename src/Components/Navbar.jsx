@@ -37,6 +37,9 @@ const Navbar = () => {
     if (path === '/blogs') {
       return location.pathname === '/blogs' || location.pathname.startsWith('/blogs/');
     }
+    if (path === '/about') {
+      return location.pathname === '/about' || location.pathname.startsWith('/about/');
+    }
     return location.pathname === path;
   };
 
@@ -49,9 +52,10 @@ const Navbar = () => {
   // Define your navigation structure with sub-pages
   const navItems = [
     { path: '/', label: 'Home' },
-    { 
-      path: '/about', 
-      label: 'About'
+    {
+      path: '/about',
+      label: 'About',
+      submenu: [{ path: '/about/our-clinic', label: 'Our Clinic' }],
     },
     { path: '/team', label: 'Team' },
     { 
@@ -67,6 +71,7 @@ const Navbar = () => {
         { path: '/services/post-hospital-rehabilitation', label: 'Post-Hospital Rehabilitation' },
         { path: '/services/respiratory-rehabilitation', label: 'Respiratory & Long Covid Rehab' },
         { path: '/services/mobile-physiotherapy', label: 'Mobile Physiotherapy' },
+        { path: '/services/musculoskeletal-physiotherapy', label: 'Musculoskeletal Physiotherapy' },
         { path: '/services/occupational-therapy', label: 'Occupational Therapy' },
         { path: '/services/vitamin-b12', label: 'Vitamin B12 Injections' },
       ]
@@ -267,8 +272,10 @@ const Navbar = () => {
                       </button>
                     </div>
                     <div
-                      className={`overflow-hidden transition-all duration-300 ${
-                        openSubmenu === item.path ? 'max-h-96 mt-4' : 'max-h-0'
+                      className={`transition-all duration-300 ${
+                        openSubmenu === item.path
+                          ? 'mt-4 max-h-[calc(100vh-12rem)] overflow-y-auto overscroll-contain'
+                          : 'max-h-0 overflow-hidden'
                       }`}
                     >
                       {item.submenu.map((subItem) => (

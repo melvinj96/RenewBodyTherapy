@@ -131,6 +131,17 @@ function Testimonials() {
         ],
         thumbnail: 'https://res.cloudinary.com/diydpxavd/video/upload/c_fill,h_300,w_400,so_1/v1749593122/VID-20250513-WA0001_zjxngg.jpg',
         alt: "Client Testimonial 9"
+      },
+      {
+        type: "video",
+        sources: [
+          {
+            src: 'https://res.cloudinary.com/diydpxavd/video/upload/v1777896876/VID-20260429-WA0001_rglog3.mp4',
+            type: "video/mp4",
+          }
+        ],
+        thumbnail: 'https://res.cloudinary.com/diydpxavd/video/upload/c_fill,h_300,w_400,so_1/v1777896876/VID-20260429-WA0001_rglog3.jpg',
+        alt: "Client Testimonial 10"
       }
       // Add more video testimonials here
     ];

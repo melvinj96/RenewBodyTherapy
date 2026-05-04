@@ -94,6 +94,13 @@ function Services() {
       selectValue: "physio"
     },
     {
+      title: "MUSCULOSKELETAL PHYSIOTHERAPY",
+      image: 'https://res.cloudinary.com/diydpxavd/image/upload/v1777897175/musculoskeletal_physio_js6izm.webp',
+      prices: ["60 mins - £55"],
+      description: `<p>Expert musculoskeletal physiotherapy in Dudley for injury rehabilitation, pain relief, and restored movement. Evidence-based assessment and treatment at our Bristol Road clinic or home visits where appropriate, guided by NHS clinical experience.</p>`,
+      selectValue: "msk-physiotherapy"
+    },
+    {
       title: "OCCUPATIONAL THERAPY",
       image: 'https://res.cloudinary.com/diydpxavd/image/upload/v1749591753/occupational_ghxf7i.jpg',
       prices: [
@@ -133,6 +140,7 @@ function Services() {
       'post-hospital-rehab': '/services/post-hospital-rehabilitation',
       'respiratory-rehab': '/services/respiratory-rehabilitation',
       'physio': '/services/mobile-physiotherapy',
+      'msk-physiotherapy': '/services/musculoskeletal-physiotherapy',
       'occupational': '/services/occupational-therapy',
       'vitamin-b12': '/services/vitamin-b12'
     };

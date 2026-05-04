@@ -405,6 +405,7 @@ function Contact() {
                                         <option value="post-hospital-rehab">Post Hospital Discharge Rehabilitation</option>
                                         <option value="respiratory-rehab">Respiratory/Long COVID Rehabilitation</option>
                                         <option value="physio">Mobile Physiotherapy</option>
+                                        <option value="msk-physiotherapy">Musculoskeletal Physiotherapy</option>
                                         <option value="occupational">Occupational Therapy</option>
                                         <option value="vitamin-b12">Vitamin B12 Injections</option>
                                         <option value="acupuncture">Dry Needling</option>
