@@ -38,7 +38,13 @@ const Navbar = () => {
       return location.pathname === '/blogs' || location.pathname.startsWith('/blogs/');
     }
     if (path === '/about') {
-      return location.pathname === '/about' || location.pathname.startsWith('/about/');
+      return (
+        location.pathname === '/about' ||
+        location.pathname.startsWith('/about/') ||
+        location.pathname === '/team' ||
+        location.pathname === '/insurance-partners' ||
+        location.pathname === '/awards'
+      );
     }
     return location.pathname === path;
   };
@@ -55,9 +61,13 @@ const Navbar = () => {
     {
       path: '/about',
       label: 'About',
-      submenu: [{ path: '/about/our-clinic', label: 'Our Clinic' }],
+      submenu: [
+        { path: '/about/our-clinic', label: 'Our Clinic' },
+        { path: '/team', label: 'Team' },
+        { path: '/insurance-partners', label: 'Insurance' },
+        { path: '/awards', label: 'Awards' },
+      ],
     },
-    { path: '/team', label: 'Team' },
     { 
       path: '/services', 
       label: 'Services',
@@ -81,12 +91,6 @@ const Navbar = () => {
     ] },
     { path: '/gallery', label: 'Gallery' },
     { path: '/testimonials', label: 'Testimonials' },
-    {
-      path: '/insurance-partners',
-      label: 'Insurance Partners',
-      navLabel: 'Insurance',
-    },
-    { path: '/awards', label: 'Awards' },
     { path: '/contact', label: 'Contact' }
   ];
 
