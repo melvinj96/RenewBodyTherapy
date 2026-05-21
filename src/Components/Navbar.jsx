@@ -86,6 +86,15 @@ const Navbar = () => {
         { path: '/services/vitamin-b12', label: 'Vitamin B12 Injections' },
       ]
     },
+    {
+      path: '/conditions',
+      label: 'Conditions',
+      noLink: true,
+      submenu: [
+        { path: '/conditions/muscle-and-pain', label: 'Muscle & Pain Conditions' },
+        { path: '/conditions/sports-and-injury', label: 'Sports & Injury Conditions' },
+      ],
+    },
     { path: '/blogs', label: 'Blogs', submenu: [
       { path: '/blogs/black-country-half-marathon', label: 'Black Country Half Marathon' },
     ] },
@@ -129,19 +138,32 @@ const Navbar = () => {
                 >
                   {item.submenu ? (
                     <>
-                      <Link
-                        to={item.path}
-                        className={`relative whitespace-nowrap px-2 py-2 text-sm font-primary font-medium transition-all duration-300 xl:px-2.5 ${
-                          isActive(item.path)
-                            ? 'text-white'
-                            : 'text-secondary hover:text-white'
-                        }`}
-                      >
-                        {item.navLabel ?? item.label}
-                        {isActive(item.path) && (
-                          <span className="absolute bottom-0 left-0 w-full h-0.5 bg-secondary"></span>
-                        )}
-                      </Link>
+                      {item.noLink ? (
+                        <span
+                          className={`relative whitespace-nowrap px-2 py-2 text-sm font-primary font-medium transition-all duration-300 xl:px-2.5 cursor-default ${
+                            isActive(item.path) ? 'text-white' : 'text-secondary'
+                          }`}
+                        >
+                          {item.navLabel ?? item.label}
+                          {isActive(item.path) && (
+                            <span className="absolute bottom-0 left-0 w-full h-0.5 bg-secondary"></span>
+                          )}
+                        </span>
+                      ) : (
+                        <Link
+                          to={item.path}
+                          className={`relative whitespace-nowrap px-2 py-2 text-sm font-primary font-medium transition-all duration-300 xl:px-2.5 ${
+                            isActive(item.path)
+                              ? 'text-white'
+                              : 'text-secondary hover:text-white'
+                          }`}
+                        >
+                          {item.navLabel ?? item.label}
+                          {isActive(item.path) && (
+                            <span className="absolute bottom-0 left-0 w-full h-0.5 bg-secondary"></span>
+                          )}
+                        </Link>
+                      )}
                       
                       {/* Submenu */}
                       <div
@@ -255,15 +277,23 @@ const Navbar = () => {
                 {item.submenu ? (
                   <>
                     <div className="flex items-center justify-between">
-                      <Link
-                        to={item.path}
-                        onClick={closeMenu}
-                        className={`text-lg font-primary font-medium ${
+                      {item.noLink ? (
+                        <span className={`text-lg font-primary font-medium cursor-default ${
                           isActive(item.path) ? 'text-white' : 'text-secondary'
-                        }`}
-                      >
-                        {item.label}
-                      </Link>
+                        }`}>
+                          {item.label}
+                        </span>
+                      ) : (
+                        <Link
+                          to={item.path}
+                          onClick={closeMenu}
+                          className={`text-lg font-primary font-medium ${
+                            isActive(item.path) ? 'text-white' : 'text-secondary'
+                          }`}
+                        >
+                          {item.label}
+                        </Link>
+                      )}
                       <button
                         onClick={() => toggleSubmenu(item.path)}
                         className="text-secondary p-2"
