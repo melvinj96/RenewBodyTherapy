@@ -72,6 +72,15 @@ const appointmentFocusBullets = [
 
 const awards = [
   {
+    title: 'West Midlands Massage Therapy Practitioner Of The Year 2025',
+    organization: 'Prestige Awards',
+    year: 2025,
+    description:
+      'Renew Body Therapy was awarded West Midlands Massage Therapy Practitioner Of The Year 2025 for the second year running by Prestige Awards.',
+    image:
+      'https://res.cloudinary.com/diydpxavd/image/upload/v1780845438/1000027977_fwb99e.jpg',
+  },
+  {
     title: 'Best Massage Therapist 2025',
     organization: 'ThreeBestRated',
     year: 2025,
