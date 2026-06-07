@@ -3,6 +3,8 @@ import TitleBand from '../Titleband';
 import Alert from '../Shared/Alert';
 import LoadingSpinner from '../Shared/LoadingSpinner';
 import AvailabilityBanner from '../Home/AvailabilityBanner';
+import AppointmentDatePicker from './AppointmentDatePicker';
+import { isDateUnavailable, parseLocalDate } from '../../config/unavailableDates';
 import ReCAPTCHA from "react-google-recaptcha";
 import GoogleMapComponent from '../Shared/GoogleMapComponent';
 import '../../assets/css/Contact.css';
@@ -99,6 +101,13 @@ function Contact() {
         setFormData(prevState => ({
             ...prevState,
             personalProblems: selectedOptions ? selectedOptions.map(option => option.value) : []
+        }));
+    };
+
+    const handleDateChange = (date) => {
+        setFormData(prevState => ({
+            ...prevState,
+            date
         }));
     };
 
@@ -225,6 +234,15 @@ function Contact() {
             setAlert({
                 show: true,
                 message: 'Please agree to the mandatory disclaimers.',
+                type: 'error'
+            });
+            return;
+        }
+
+        if (!formData.date || isDateUnavailable(parseLocalDate(formData.date))) {
+            setAlert({
+                show: true,
+                message: 'Please select an available appointment date.',
                 type: 'error'
             });
             return;
@@ -413,12 +431,10 @@ function Contact() {
                                 </div>
                                 <div className="form-group">
                                     <label htmlFor="date" className="required">Select a date *</label>
-                                    <input
-                                        type="date"
+                                    <AppointmentDatePicker
                                         id="date"
-                                        name="date"
                                         value={formData.date}
-                                        onChange={handleInputChange}
+                                        onChange={handleDateChange}
                                         required
                                     />
                                 </div>

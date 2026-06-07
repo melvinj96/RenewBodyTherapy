@@ -104,6 +104,62 @@
   .submit-button:hover {
     background-color: #d35400;
   }
+
+  /* Appointment date picker */
+  .appointment-date-picker {
+    position: relative;
+    --rdp-accent-color: #E67E22;
+    --rdp-accent-background-color: #fdebd0;
+    --rdp-day-height: 36px;
+    --rdp-day-width: 36px;
+    --rdp-day_button-height: 34px;
+    --rdp-day_button-width: 34px;
+  }
+
+  .appointment-date-picker__input-row {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .appointment-date-picker__input {
+    flex: 1;
+    cursor: pointer;
+    background-color: #fff;
+  }
+
+  .appointment-date-picker__toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #E67E22;
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+  }
+
+  .appointment-date-picker__toggle:hover {
+    background-color: #fdebd0;
+    border-color: #E67E22;
+  }
+
+  .appointment-date-picker__calendar {
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    left: 0;
+    z-index: 20;
+    padding: 0.75rem;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  }
+
+  .appointment-date-picker__calendar .rdp-root {
+    font-size: 0.9rem;
+  }
   
   /* Map Section */
   .contact-map {
