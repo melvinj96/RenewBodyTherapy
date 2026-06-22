@@ -28,6 +28,8 @@ import Contact from './Components/Contact/Contact';
 import Awards from './Components/Awards/Awards';
 import MuscleAndPainConditions from './Components/Conditions/MuscleAndPainConditions';
 import SportsAndInjuryConditions from './Components/Conditions/SportsAndInjuryConditions';
+import NerveAndComplexConditions from './Components/Conditions/NerveAndComplexConditions';
+import LifestyleAndWorkRelatedConditions from './Components/Conditions/LifestyleAndWorkRelatedConditions';
 import ScrollToTop from './Components/Shared/ScrollToTop';
 function App() {
   return (
@@ -55,6 +57,8 @@ function App() {
           <Route path="/services/vitamin-b12" element={<VitaminB12 />} />
           <Route path="/conditions/muscle-and-pain" element={<MuscleAndPainConditions />} />
           <Route path="/conditions/sports-and-injury" element={<SportsAndInjuryConditions />} />
+          <Route path="/conditions/nerve-and-complex" element={<NerveAndComplexConditions />} />
+          <Route path="/conditions/lifestyle-and-work-related" element={<LifestyleAndWorkRelatedConditions />} />
           <Route path="/blogs" element={<Blogs />} />
           {blogPosts.map(({ slug, Component }) => (
             <Route key={slug} path={`/blogs/${slug}`} element={<Component />} />

@@ -397,8 +397,7 @@ function MuscleAndPainConditions() {
                   recovery and improve function.
                 </p>
               </div>
-              <div className="space-y-8">
-                {/* Symptoms card */}
+              <div>
                 <div className="bg-white rounded-2xl shadow-md border border-gray-100 p-6">
                   <h3 className="text-xl font-tertiary font-bold text-secondary mb-4">
                     Common Symptoms
@@ -413,13 +412,13 @@ function MuscleAndPainConditions() {
                     pain should not be ignored.
                   </p>
                 </div>
-
-                {/* Causes card */}
+              </div>
+              <div className="lg:col-span-2">
                 <div className="bg-gradient-to-br from-primary/5 to-secondary/5 rounded-2xl border border-gray-200 p-6">
                   <h3 className="text-xl font-tertiary font-bold text-secondary mb-4">
                     Possible Causes &amp; Triggers
                   </h3>
-                  <BulletList items={CAUSES} />
+                  <BulletList items={CAUSES} twoCol />
                   <p className="text-sm text-gray-600 mt-4">
                     In some cases, pain may involve more than one contributing factor, which is why
                     personalised assessment is important.

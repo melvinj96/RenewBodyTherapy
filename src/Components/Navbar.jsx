@@ -93,6 +93,8 @@ const Navbar = () => {
       submenu: [
         { path: '/conditions/muscle-and-pain', label: 'Muscle & Pain Conditions' },
         { path: '/conditions/sports-and-injury', label: 'Sports & Injury Conditions' },
+        { path: '/conditions/nerve-and-complex', label: 'Nerve & Complex Conditions' },
+        { path: '/conditions/lifestyle-and-work-related', label: 'Lifestyle & Work-Related Conditions' },
       ],
     },
     { path: '/blogs', label: 'Blogs', submenu: [
