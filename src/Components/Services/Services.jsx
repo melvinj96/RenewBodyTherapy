@@ -126,6 +126,15 @@ function Services() {
       ],
       description: `<p>Dry needling is used to reduce muscle tightness, improve circulation, and relieve pain. It can be offered as a standalone service or combined with massage therapy.</p>`,
       selectValue: "acupuncture"
+    },
+    {
+      title: "HOME REHABILITATION",
+      image: 'https://res.cloudinary.com/diydpxavd/image/upload/v1749591756/post-hospital_petri9.jpg',
+      prices: [
+        "60 mins - £55"
+      ],
+      description: `<p>Structured rehabilitation delivered directly to your home in Dudley and the surrounding areas, ideal for clients recovering from surgery, illness, or reduced mobility who may struggle to attend a clinic.</p>`,
+      selectValue: "home-rehab"
     }
 ];
 
@@ -142,7 +151,8 @@ function Services() {
       'physio': '/services/mobile-physiotherapy',
       'msk-physiotherapy': '/services/musculoskeletal-physiotherapy',
       'occupational': '/services/occupational-therapy',
-      'vitamin-b12': '/services/vitamin-b12'
+      'vitamin-b12': '/services/vitamin-b12',
+      'home-rehab': '/services/home-rehabilitation'
     };
     return routeMap[selectValue] || null;
   };

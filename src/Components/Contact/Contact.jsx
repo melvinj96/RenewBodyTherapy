@@ -427,6 +427,7 @@ function Contact() {
                                         <option value="occupational">Occupational Therapy</option>
                                         <option value="vitamin-b12">Vitamin B12 Injections</option>
                                         <option value="acupuncture">Dry Needling</option>
+                                        <option value="home-rehab">Home Rehabilitation</option>
                                     </select>
                                 </div>
                                 <div className="form-group">

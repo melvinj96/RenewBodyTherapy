@@ -13,6 +13,7 @@ const ServicePageTemplate = ({
   whatIs,
   benefits,
   whatToExpect,
+  relatedServices,
   whenToGet,
   whoCanBenefit,
   trustSection,
@@ -245,11 +246,46 @@ const ServicePageTemplate = ({
             </div>
           )}
 
+          {/* Related Services Section */}
+          {relatedServices && (
+            <div className="mb-16">
+              <h2 className="text-3xl sm:text-4xl font-tertiary font-bold text-primary mb-4">
+                {relatedServices.heading || 'Related Services'}
+              </h2>
+              {relatedServices.intro && (
+                <p className="text-base sm:text-lg text-gray-600 mb-10 max-w-3xl">
+                  {relatedServices.intro}
+                </p>
+              )}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {relatedServices.items && relatedServices.items.map((item, idx) => (
+                  <div
+                    key={idx}
+                    className="bg-white rounded-2xl shadow-md border border-gray-100 p-6 hover:shadow-lg transition-shadow duration-300 flex flex-col"
+                  >
+                    <h3 className="text-xl font-tertiary font-bold text-secondary mb-3">
+                      {item.title}
+                    </h3>
+                    <p className="text-gray-700 text-sm leading-relaxed mb-4">{item.description}</p>
+                    {item.link && (
+                      <Link
+                        to={item.link}
+                        className="mt-auto inline-flex items-center gap-1 text-secondary hover:text-secondary-dark font-semibold text-sm hover:underline"
+                      >
+                        {item.linkLabel || 'Learn More'} →
+                      </Link>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
           {/* When to Get Section */}
           {whenToGet && (
             <div className="mb-16">
               <h2 className="text-3xl sm:text-4xl font-tertiary font-bold text-primary mb-6">
-                When Should You Get {headingTitle.split(' in ')[0]}?
+                {customHeadings?.whenToGet || `When Should You Get ${headingTitle.split(' in ')[0]}?`}
               </h2>
               <div className="space-y-6">
                 {whenToGet && whenToGet.map((item, idx) => (

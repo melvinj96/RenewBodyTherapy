@@ -19,6 +19,7 @@ import MobilePhysiotherapy from './Components/Services/MobilePhysiotherapy';
 import MusculoskeletalPhysiotherapy from './Components/Services/MusculoskeletalPhysiotherapy';
 import OccupationalTherapy from './Components/Services/OccupationalTherapy';
 import VitaminB12 from './Components/Services/VitaminB12';
+import HomeRehabilitation from './Components/Services/HomeRehabilitation';
 import Gallery from './Components/Gallery/Gallery';
 import Blogs from './Components/Blogs/Blogs';
 import { blogPosts } from './data/blogPosts';
@@ -30,6 +31,8 @@ import MuscleAndPainConditions from './Components/Conditions/MuscleAndPainCondit
 import SportsAndInjuryConditions from './Components/Conditions/SportsAndInjuryConditions';
 import NerveAndComplexConditions from './Components/Conditions/NerveAndComplexConditions';
 import LifestyleAndWorkRelatedConditions from './Components/Conditions/LifestyleAndWorkRelatedConditions';
+import RehabilitationAndPostMedicalConditions from './Components/Conditions/RehabilitationAndPostMedicalConditions';
+import BackPainConditions from './Components/Conditions/BackPainConditions';
 import ScrollToTop from './Components/Shared/ScrollToTop';
 function App() {
   return (
@@ -55,10 +58,13 @@ function App() {
           <Route path="/services/musculoskeletal-physiotherapy" element={<MusculoskeletalPhysiotherapy />} />
           <Route path="/services/occupational-therapy" element={<OccupationalTherapy />} />
           <Route path="/services/vitamin-b12" element={<VitaminB12 />} />
+          <Route path="/services/home-rehabilitation" element={<HomeRehabilitation />} />
           <Route path="/conditions/muscle-and-pain" element={<MuscleAndPainConditions />} />
           <Route path="/conditions/sports-and-injury" element={<SportsAndInjuryConditions />} />
           <Route path="/conditions/nerve-and-complex" element={<NerveAndComplexConditions />} />
           <Route path="/conditions/lifestyle-and-work-related" element={<LifestyleAndWorkRelatedConditions />} />
+          <Route path="/conditions/rehabilitation-and-post-medical" element={<RehabilitationAndPostMedicalConditions />} />
+          <Route path="/conditions/back-pain" element={<BackPainConditions />} />
           <Route path="/blogs" element={<Blogs />} />
           {blogPosts.map(({ slug, Component }) => (
             <Route key={slug} path={`/blogs/${slug}`} element={<Component />} />

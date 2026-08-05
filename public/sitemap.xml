@@ -103,6 +103,12 @@
     <priority>0.75</priority>
   </url>
   <url>
+    <loc>https://www.renewbodytherapy.co.uk/services/home-rehabilitation</loc>
+    <lastmod>2026-08-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
     <loc>https://www.renewbodytherapy.co.uk/conditions/muscle-and-pain</loc>
     <lastmod>2026-05-21</lastmod>
     <changefreq>monthly</changefreq>
@@ -123,6 +129,18 @@
   <url>
     <loc>https://www.renewbodytherapy.co.uk/conditions/lifestyle-and-work-related</loc>
     <lastmod>2026-06-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.renewbodytherapy.co.uk/conditions/rehabilitation-and-post-medical</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.renewbodytherapy.co.uk/conditions/back-pain</loc>
+    <lastmod>2026-08-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>

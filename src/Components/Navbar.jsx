@@ -84,6 +84,7 @@ const Navbar = () => {
         { path: '/services/musculoskeletal-physiotherapy', label: 'Musculoskeletal Physiotherapy' },
         { path: '/services/occupational-therapy', label: 'Occupational Therapy' },
         { path: '/services/vitamin-b12', label: 'Vitamin B12 Injections' },
+        { path: '/services/home-rehabilitation', label: 'Home Rehabilitation' },
       ]
     },
     {
@@ -95,6 +96,8 @@ const Navbar = () => {
         { path: '/conditions/sports-and-injury', label: 'Sports & Injury Conditions' },
         { path: '/conditions/nerve-and-complex', label: 'Nerve & Complex Conditions' },
         { path: '/conditions/lifestyle-and-work-related', label: 'Lifestyle & Work-Related Conditions' },
+        { path: '/conditions/rehabilitation-and-post-medical', label: 'Rehabilitation & Post-Medical Conditions' },
+        { path: '/conditions/back-pain', label: 'Back Pain' },
       ],
     },
     { path: '/blogs', label: 'Blogs', submenu: [
