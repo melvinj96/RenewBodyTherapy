@@ -308,9 +308,6 @@ function SportsAndInjuryConditions() {
                     Conditions We Support
                   </span>
                 </div>
-                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-tertiary font-bold text-primary mb-6 leading-tight">
-                  Sports &amp; Injury Treatments in Dudley
-                </h2>
                 <p className="text-base sm:text-lg text-gray-700 leading-relaxed mb-8">
                   Sports injuries and movement-related pain can affect training, work, exercise, and
                   everyday comfort. At Renew Body Therapy, we provide personalised sports and injury

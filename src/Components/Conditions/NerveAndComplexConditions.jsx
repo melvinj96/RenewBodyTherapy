@@ -328,9 +328,6 @@ function NerveAndComplexConditions() {
                     Conditions We Support
                   </span>
                 </div>
-                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-tertiary font-bold text-primary mb-6 leading-tight">
-                  Nerve &amp; Complex Condition Support in Dudley
-                </h2>
                 <p className="text-base sm:text-lg text-gray-700 leading-relaxed mb-4">
                   Living with nerve-related symptoms can be frustrating, uncomfortable, and sometimes
                   difficult to understand. Tingling, numbness, burning sensations, weakness, or

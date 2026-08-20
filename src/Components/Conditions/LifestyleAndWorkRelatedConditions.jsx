@@ -337,9 +337,6 @@ function LifestyleAndWorkRelatedConditions() {
                     Conditions We Support
                   </span>
                 </div>
-                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-tertiary font-bold text-primary mb-6 leading-tight">
-                  Lifestyle &amp; Work-Related Condition Support in Dudley
-                </h2>
                 <p className="text-base sm:text-lg text-gray-700 leading-relaxed mb-4">
                   Modern lifestyles and working environments can place significant demands on the
                   body. Whether you spend long hours at a desk, perform physically demanding manual

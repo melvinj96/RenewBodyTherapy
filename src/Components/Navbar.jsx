@@ -98,6 +98,8 @@ const Navbar = () => {
         { path: '/conditions/lifestyle-and-work-related', label: 'Lifestyle & Work-Related Conditions' },
         { path: '/conditions/rehabilitation-and-post-medical', label: 'Rehabilitation & Post-Medical Conditions' },
         { path: '/conditions/back-pain', label: 'Back Pain' },
+        { path: '/conditions/neck-pain', label: 'Neck Pain' },
+        { path: '/conditions/shoulder-pain', label: 'Shoulder Pain' },
       ],
     },
     { path: '/blogs', label: 'Blogs', submenu: [

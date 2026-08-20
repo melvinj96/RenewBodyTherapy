@@ -319,9 +319,6 @@ function BackPainConditions() {
                     Conditions We Support
                   </span>
                 </div>
-                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-tertiary font-bold text-primary mb-6 leading-tight">
-                  Back Pain Treatment in Dudley (Lower &amp; Upper Back Support)
-                </h2>
                 <p className="text-base sm:text-lg text-gray-700 leading-relaxed mb-4">
                   Back pain is one of the most common reasons people seek treatment. Whether it is
                   a dull ache, sharp discomfort, stiffness, or pain that limits movement, back

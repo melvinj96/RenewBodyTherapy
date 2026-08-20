@@ -304,9 +304,6 @@ function MuscleAndPainConditions() {
                     Conditions We Support
                   </span>
                 </div>
-                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-tertiary font-bold text-primary mb-6 leading-tight">
-                  Muscle &amp; Pain Treatments in Dudley
-                </h2>
                 <p className="text-base sm:text-lg text-gray-700 leading-relaxed mb-8">
                   Living with ongoing muscle tightness, joint discomfort, postural strain, or
                   persistent pain can affect every part of daily life. At Renew Body Therapy, we
