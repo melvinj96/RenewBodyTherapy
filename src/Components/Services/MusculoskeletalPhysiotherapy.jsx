@@ -1,4 +1,5 @@
 import ServicePageTemplate from './ServicePageTemplate';
+import { AVAILABILITY_FAQ } from '../../data/availabilityFaq';
 
 function MusculoskeletalPhysiotherapy() {
   return (
@@ -120,6 +121,7 @@ function MusculoskeletalPhysiotherapy() {
           answer:
             'Yes. Physiotherapy can help manage chronic conditions by improving movement, reducing pain, and supporting daily function.',
         },
+        AVAILABILITY_FAQ,
       ]}
       image="https://res.cloudinary.com/diydpxavd/image/upload/v1777897175/musculoskeletal_physio_js6izm.webp"
       serviceSelectValue="msk-physiotherapy"

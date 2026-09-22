@@ -1,4 +1,5 @@
 import ServicePageTemplate from './ServicePageTemplate';
+import { AVAILABILITY_FAQ } from '../../data/availabilityFaq';
 
 function VitaminB12() {
   return (
@@ -92,7 +93,8 @@ function VitaminB12() {
         {
           question: "Do I need a prescription?",
           answer: "You should consult with your GP first to confirm B12 deficiency and get appropriate guidance on supplementation."
-        }
+        },
+        AVAILABILITY_FAQ
       ]}
       image="https://res.cloudinary.com/diydpxavd/image/upload/v1749591765/vitamin-b12_njshpz.jpg"
       serviceSelectValue="vitamin-b12"

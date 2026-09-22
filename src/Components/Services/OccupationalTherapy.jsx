@@ -1,4 +1,5 @@
 import ServicePageTemplate from './ServicePageTemplate';
+import { AVAILABILITY_FAQ } from '../../data/availabilityFaq';
 
 function OccupationalTherapy() {
   return (
@@ -110,7 +111,8 @@ function OccupationalTherapy() {
         {
           question: "Is occupational therapy suitable for older adults?",
           answer: "Yes. Occupational therapy is ideal for older adults who want to maintain independence, reduce falls risk, improve mobility, or manage long term conditions safely."
-        }
+        },
+        AVAILABILITY_FAQ
       ]}
       image="https://res.cloudinary.com/diydpxavd/image/upload/v1749591753/occupational_ghxf7i.jpg"
       serviceSelectValue="occupational"

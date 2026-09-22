@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import TitleBand from '../Titleband';
+import { AVAILABILITY_FAQ } from '../../data/availabilityFaq';
 
 const HERO_IMAGE =
   'https://res.cloudinary.com/diydpxavd/image/upload/v1749591748/deep-tissue_qza6dp.jpg';
@@ -221,6 +222,7 @@ const FAQS = [
     answer:
       'This depends on your symptoms, goals, and how long the issue has been present.',
   },
+  AVAILABILITY_FAQ,
 ];
 
 function CheckIcon({ className = 'w-4 h-4' }) {

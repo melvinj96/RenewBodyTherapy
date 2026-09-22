@@ -327,13 +327,16 @@ function Contact() {
             <div className={isLoading ? 'content-disabled' : ''}>
                 <TitleBand
                     title="BOOK YOUR APPOINTMENT"
-                    subtitle="I am available with restricted timings on weekdays and all day on weekends."
                 />
                 <AvailabilityBanner />
                 <div className="contact-container">
                     {/* Info Section */}
                     <section className="contact-info">
                         <p>Please call or email to book your appointment or use the online form and I will get back to you.</p>
+                        <p><b>Monday to Friday appointments:</b> Our main availability is 5:00pm–8:00pm,</p>
+                        <p><b>Weekend appointments:</b> We offer flexible appointment times throughout the weekend, subject to availability.</p>
+                        <br></br>
+                        <p><b>Need an appointment outside these hours? Alternative therapists may be available depending on your preferred day and time. Please get in touch and we'll do our best to accommodate your needs.</b></p>
 
                         <div className="contact-details">
                             <a href="mailto:jikku2006@gmail.com" className="contact-item">

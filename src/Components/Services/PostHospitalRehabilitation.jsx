@@ -1,4 +1,5 @@
 import ServicePageTemplate from './ServicePageTemplate';
+import { AVAILABILITY_FAQ } from '../../data/availabilityFaq';
 
 function PostHospitalRehabilitation() {
   return (
@@ -110,7 +111,8 @@ function PostHospitalRehabilitation() {
         {
           question: "Will this help prevent falls?",
           answer: "Yes. We assess and address mobility, strength, and environmental factors that contribute to falls risk after hospital discharge."
-        }
+        },
+        AVAILABILITY_FAQ
       ]}
       customHeadings={{
         whyChoose: "Why Choose Our Post-Hospital Rehab Service?",

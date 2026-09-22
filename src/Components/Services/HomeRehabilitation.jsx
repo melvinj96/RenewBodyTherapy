@@ -1,4 +1,5 @@
 import ServicePageTemplate from './ServicePageTemplate';
+import { AVAILABILITY_FAQ } from '../../data/availabilityFaq';
 
 function HomeRehabilitation() {
   return (
@@ -164,7 +165,8 @@ function HomeRehabilitation() {
         {
           question: "Is Home Rehabilitation As Effective As Clinic Treatment?",
           answer: "In many cases, it can be more effective because treatment is tailored to your real-life environment and daily activities."
-        }
+        },
+        AVAILABILITY_FAQ
       ]}
       image="https://res.cloudinary.com/diydpxavd/image/upload/v1749591756/post-hospital_petri9.jpg"
       serviceSelectValue="home-rehab"

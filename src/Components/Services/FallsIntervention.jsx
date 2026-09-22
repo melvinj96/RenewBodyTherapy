@@ -1,4 +1,5 @@
 import ServicePageTemplate from './ServicePageTemplate';
+import { AVAILABILITY_FAQ } from '../../data/availabilityFaq';
 
 function FallsIntervention() {
   return (
@@ -109,7 +110,8 @@ function FallsIntervention() {
         {
           question: "Is falls intervention only for older adults?",
           answer: "While common in older adults, fall intervention is also beneficial for individuals recovering from surgery, illness, stroke, or neurological conditions."
-        }
+        },
+        AVAILABILITY_FAQ
       ]}
       customHeadings={{
         whyChoose: "Why Choose Our Falls Intervention Service?",

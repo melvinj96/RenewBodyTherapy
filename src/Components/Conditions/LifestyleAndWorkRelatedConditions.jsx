@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import TitleBand from '../Titleband';
+import { AVAILABILITY_FAQ } from '../../data/availabilityFaq';
 
 const HERO_IMAGE =
   'https://res.cloudinary.com/diydpxavd/image/upload/v1749591753/occupational_ghxf7i.jpg';
@@ -239,6 +240,7 @@ const FAQS = [
     answer:
       'Yes. Selected rehabilitation services may be available through home visits, depending on suitability and location.',
   },
+  AVAILABILITY_FAQ,
 ];
 
 function CheckIcon({ className = 'w-4 h-4' }) {

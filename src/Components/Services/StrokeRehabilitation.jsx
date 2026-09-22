@@ -1,4 +1,5 @@
 import ServicePageTemplate from './ServicePageTemplate';
+import { AVAILABILITY_FAQ } from '../../data/availabilityFaq';
 
 function StrokeRehabilitation() {
   return (
@@ -116,7 +117,8 @@ function StrokeRehabilitation() {
         {
           question: "What if my loved one has limited mobility or confidence?",
           answer: "Stroke rehabilitation is adapted to each individual's abilities. Sessions progress gradually and safely, with a strong focus on reassurance, confidence building, and achievable goals."
-        }
+        },
+        AVAILABILITY_FAQ
       ]}
       image="https://res.cloudinary.com/diydpxavd/image/upload/v1768415464/stroke_rehabilitation_rzk2or.jpg"
       serviceSelectValue="stroke-rehab"

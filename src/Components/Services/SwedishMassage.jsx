@@ -1,4 +1,5 @@
 import ServicePageTemplate from './ServicePageTemplate';
+import { AVAILABILITY_FAQ } from '../../data/availabilityFaq';
 
 function SwedishMassage() {
   return (
@@ -92,7 +93,8 @@ function SwedishMassage() {
         {
           question: "Will I feel sore after a Swedish massage?",
           answer: "No, Swedish massage uses gentle pressure, so you should feel relaxed and refreshed rather than sore."
-        }
+        },
+        AVAILABILITY_FAQ
       ]}
       image="https://res.cloudinary.com/diydpxavd/image/upload/v1749591763/swedish_nqcbj4.jpg"
       serviceSelectValue="swedish"

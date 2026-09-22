@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import TitleBand from '../Titleband';
+import { AVAILABILITY_FAQ } from '../../data/availabilityFaq';
 
 const HERO_IMAGE =
   'https://res.cloudinary.com/diydpxavd/image/upload/v1749591760/sports_nrw9bm.jpg';
@@ -210,6 +211,7 @@ const FAQS = [
     answer:
       'Yes. Some clients benefit from combining approaches such as sports massage, dry needling, and rehabilitation-focused exercises within a personalised treatment plan.',
   },
+  AVAILABILITY_FAQ,
 ];
 
 function CheckIcon({ className = 'w-4 h-4' }) {

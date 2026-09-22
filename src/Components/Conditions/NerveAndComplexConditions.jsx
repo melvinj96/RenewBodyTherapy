@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import TitleBand from '../Titleband';
+import { AVAILABILITY_FAQ } from '../../data/availabilityFaq';
 
 const HERO_IMAGE =
   'https://res.cloudinary.com/diydpxavd/image/upload/v1749591747/acupuncture_ybkipz.jpg';
@@ -230,6 +231,7 @@ const FAQS = [
     answer:
       'This depends on the cause, severity, and duration of symptoms, as well as your goals and response to treatment.',
   },
+  AVAILABILITY_FAQ,
 ];
 
 function CheckIcon({ className = 'w-4 h-4' }) {

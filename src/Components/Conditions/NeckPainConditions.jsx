@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import TitleBand from '../Titleband';
+import { AVAILABILITY_FAQ } from '../../data/availabilityFaq';
 
 const HERO_IMAGE =
   'https://res.cloudinary.com/diydpxavd/image/upload/v1749591755/physio_w866c0.jpg';
@@ -249,6 +250,7 @@ const FAQS = [
     answer:
       'No. Most clients can contact Renew Body Therapy directly to discuss an appointment. If your symptoms suggest that medical or specialist assessment would be more appropriate, you may be advised accordingly.',
   },
+  AVAILABILITY_FAQ,
 ];
 
 function CheckIcon({ className = 'w-4 h-4' }) {

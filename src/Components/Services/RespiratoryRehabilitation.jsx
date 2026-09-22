@@ -1,4 +1,5 @@
 import ServicePageTemplate from './ServicePageTemplate';
+import { AVAILABILITY_FAQ } from '../../data/availabilityFaq';
 
 function RespiratoryRehabilitation() {
   return (
@@ -94,7 +95,8 @@ function RespiratoryRehabilitation() {
         {
           question: "Are sessions done at home?",
           answer: "Yes, we offer home-based sessions, which can be particularly helpful when dealing with fatigue and reduced capacity."
-        }
+        },
+        AVAILABILITY_FAQ
       ]}
       image="https://res.cloudinary.com/diydpxavd/image/upload/v1749591758/respiratory-rehab_mzccnt.jpg"
       serviceSelectValue="respiratory-rehab"

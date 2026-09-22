@@ -1,4 +1,5 @@
 import ServicePageTemplate from './ServicePageTemplate';
+import { AVAILABILITY_FAQ } from '../../data/availabilityFaq';
 
 function AcupunctureDryNeedling() {
   return (
@@ -109,7 +110,8 @@ function AcupunctureDryNeedling() {
         {
           question: "How many sessions will I need?",
           answer: "Some clients feel improvement after a single session, while others may benefit from a short course of treatments depending on the severity and duration of their symptoms."
-        }
+        },
+        AVAILABILITY_FAQ
       ]}
       image="https://res.cloudinary.com/diydpxavd/image/upload/v1749591747/acupuncture_ybkipz.jpg"
       serviceSelectValue="acupuncture"

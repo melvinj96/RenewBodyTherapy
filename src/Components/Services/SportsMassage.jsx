@@ -1,4 +1,5 @@
 import ServicePageTemplate from './ServicePageTemplate';
+import { AVAILABILITY_FAQ } from '../../data/availabilityFaq';
 
 function SportsMassage() {
   return (
@@ -118,7 +119,8 @@ function SportsMassage() {
         {
           question: "Is this service suitable for beginners or non athletes?",
           answer: "Sports massage benefits anyone who experiences muscular tension, limited mobility, or physical strain."
-        }
+        },
+        AVAILABILITY_FAQ
       ]}
       image="https://res.cloudinary.com/diydpxavd/image/upload/v1749591760/sports_nrw9bm.jpg"
       serviceSelectValue="sports"

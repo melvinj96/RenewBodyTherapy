@@ -1,4 +1,5 @@
 import ServicePageTemplate from './ServicePageTemplate';
+import { AVAILABILITY_FAQ } from '../../data/availabilityFaq';
 
 function MobilePhysiotherapy() {
   return (
@@ -110,7 +111,8 @@ function MobilePhysiotherapy() {
         {
           question: "Is mobile physiotherapy as effective as clinic based care?",
           answer: "Yes. Mobile physiotherapy provides the same professional care as a clinic appointment, often with the added benefit of assessing real life mobility challenges in your home."
-        }
+        },
+        AVAILABILITY_FAQ
       ]}
       image="https://res.cloudinary.com/diydpxavd/image/upload/v1749591755/physio_w866c0.jpg"
       serviceSelectValue="physio"

@@ -1,4 +1,5 @@
 import ServicePageTemplate from './ServicePageTemplate';
+import { AVAILABILITY_FAQ } from '../../data/availabilityFaq';
 
 function DeepTissueMassage() {
   return (
@@ -125,7 +126,8 @@ function DeepTissueMassage() {
           question: "Should I choose deep tissue massage or Swedish massage?",
           answer: "If you are looking for relaxation and gentle tension release, Swedish massage may be more suitable. If you have deeper muscular pain, stiffness, or restricted movement, deep tissue massage is often the better option. We can guide you during your consultation.",
           learnMoreLink: "/services/swedish-massage"
-        }
+        },
+        AVAILABILITY_FAQ
       ]}
       image="https://res.cloudinary.com/diydpxavd/image/upload/v1749591748/deep-tissue_qza6dp.jpg"
       serviceSelectValue="deep-tissue"
