@@ -35,6 +35,8 @@ import RehabilitationAndPostMedicalConditions from './Components/Conditions/Reha
 import BackPainConditions from './Components/Conditions/BackPainConditions';
 import NeckPainConditions from './Components/Conditions/NeckPainConditions';
 import ShoulderPainConditions from './Components/Conditions/ShoulderPainConditions';
+import KneePainConditions from './Components/Conditions/KneePainConditions';
+import SciaticaConditions from './Components/Conditions/SciaticaConditions';
 import ScrollToTop from './Components/Shared/ScrollToTop';
 function App() {
   return (
@@ -69,6 +71,8 @@ function App() {
           <Route path="/conditions/back-pain" element={<BackPainConditions />} />
           <Route path="/conditions/neck-pain" element={<NeckPainConditions />} />
           <Route path="/conditions/shoulder-pain" element={<ShoulderPainConditions />} />
+          <Route path="/conditions/knee-pain" element={<KneePainConditions />} />
+          <Route path="/conditions/sciatica" element={<SciaticaConditions />} />
           <Route path="/blogs" element={<Blogs />} />
           {blogPosts.map(({ slug, Component }) => (
             <Route key={slug} path={`/blogs/${slug}`} element={<Component />} />

@@ -6,6 +6,7 @@ import { FaInstagram, FaFacebook, FaTiktok, FaBars, FaTimes, FaChevronDown } fro
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [openSubmenu, setOpenSubmenu] = useState(null);
+  const [openNestedMenu, setOpenNestedMenu] = useState(null);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
@@ -21,6 +22,7 @@ const Navbar = () => {
     const newState = !isOpen;
     setIsOpen(newState);
     setOpenSubmenu(null);
+    setOpenNestedMenu(null);
     if (newState) {
       document.body.style.overflow = 'hidden';
     } else {
@@ -30,6 +32,11 @@ const Navbar = () => {
 
   const toggleSubmenu = (menuName) => {
     setOpenSubmenu(openSubmenu === menuName ? null : menuName);
+    setOpenNestedMenu(null);
+  };
+
+  const toggleNestedMenu = (menuName) => {
+    setOpenNestedMenu(openNestedMenu === menuName ? null : menuName);
   };
 
   const isActive = (path) => {
@@ -49,9 +56,13 @@ const Navbar = () => {
     return location.pathname === path;
   };
 
+  const isSubItemActive = (subItem) =>
+    isActive(subItem.path) || (subItem.submenu?.some((child) => isActive(child.path)) ?? false);
+
   const closeMenu = () => {
     setIsOpen(false);
     setOpenSubmenu(null);
+    setOpenNestedMenu(null);
     document.body.style.overflow = 'unset';
   };
 
@@ -92,14 +103,26 @@ const Navbar = () => {
       label: 'Conditions',
       noLink: true,
       submenu: [
-        { path: '/conditions/muscle-and-pain', label: 'Muscle & Pain Conditions' },
+        {
+          path: '/conditions/muscle-and-pain',
+          label: 'Muscle & Pain Conditions',
+          submenu: [
+            { path: '/conditions/back-pain', label: 'Back Pain' },
+            { path: '/conditions/neck-pain', label: 'Neck Pain' },
+            { path: '/conditions/shoulder-pain', label: 'Shoulder Pain' },
+            { path: '/conditions/knee-pain', label: 'Knee Pain' },
+          ],
+        },
         { path: '/conditions/sports-and-injury', label: 'Sports & Injury Conditions' },
-        { path: '/conditions/nerve-and-complex', label: 'Nerve & Complex Conditions' },
+        {
+          path: '/conditions/nerve-and-complex',
+          label: 'Nerve & Complex Conditions',
+          submenu: [
+            { path: '/conditions/sciatica', label: 'Sciatica' },
+          ],
+        },
         { path: '/conditions/lifestyle-and-work-related', label: 'Lifestyle & Work-Related Conditions' },
         { path: '/conditions/rehabilitation-and-post-medical', label: 'Rehabilitation & Post-Medical Conditions' },
-        { path: '/conditions/back-pain', label: 'Back Pain' },
-        { path: '/conditions/neck-pain', label: 'Neck Pain' },
-        { path: '/conditions/shoulder-pain', label: 'Shoulder Pain' },
       ],
     },
     { path: '/blogs', label: 'Blogs', submenu: [
@@ -141,7 +164,12 @@ const Navbar = () => {
                   key={item.path} 
                   className="relative shrink-0 group"
                   onMouseEnter={() => item.submenu && setOpenSubmenu(item.path)}
-                  onMouseLeave={() => item.submenu && setOpenSubmenu(null)}
+                  onMouseLeave={() => {
+                    if (item.submenu) {
+                      setOpenSubmenu(null);
+                      setOpenNestedMenu(null);
+                    }
+                  }}
                 >
                   {item.submenu ? (
                     <>
@@ -174,24 +202,57 @@ const Navbar = () => {
                       
                       {/* Submenu */}
                       <div
-                        className={`absolute top-full left-0 mt-2 w-56 bg-white/95 backdrop-blur-md rounded-xl shadow-2xl border border-white/20 overflow-hidden transition-all duration-300 ${
+                        className={`absolute top-full left-0 mt-2 w-56 bg-white/95 backdrop-blur-md rounded-xl shadow-2xl border border-white/20 transition-all duration-300 ${
                           openSubmenu === item.path
                             ? 'opacity-100 visible translate-y-0'
                             : 'opacity-0 invisible -translate-y-2'
                         }`}
                       >
                         {item.submenu.map((subItem) => (
-                          <Link
+                          <div
                             key={subItem.path}
-                            to={subItem.path}
-                            className={`block px-4 py-3 text-sm font-primary transition-all duration-200 ${
-                              isActive(subItem.path)
-                                ? 'bg-secondary/10 text-secondary font-semibold'
-                                : 'text-primary hover:bg-secondary/5 hover:text-secondary'
-                            }`}
+                            className="relative [&:first-child>a]:rounded-t-xl [&:last-child>a]:rounded-b-xl"
+                            onMouseEnter={() => setOpenNestedMenu(subItem.submenu ? subItem.path : null)}
                           >
-                            {subItem.label}
-                          </Link>
+                            <Link
+                              to={subItem.path}
+                              className={`flex items-center justify-between gap-2 px-4 py-3 text-sm font-primary transition-all duration-200 ${
+                                isSubItemActive(subItem)
+                                  ? 'bg-secondary/10 text-secondary font-semibold'
+                                  : 'text-primary hover:bg-secondary/5 hover:text-secondary'
+                              }`}
+                            >
+                              {subItem.label}
+                              {subItem.submenu && (
+                                <FaChevronDown className="w-3 h-3 flex-shrink-0 -rotate-90" />
+                              )}
+                            </Link>
+
+                            {/* Nested submenu */}
+                            {subItem.submenu && (
+                              <div
+                                className={`absolute top-0 left-full w-48 bg-white/95 backdrop-blur-md rounded-xl shadow-2xl border border-white/20 overflow-hidden transition-all duration-200 ${
+                                  openNestedMenu === subItem.path
+                                    ? 'opacity-100 visible translate-x-0'
+                                    : 'opacity-0 invisible -translate-x-2'
+                                }`}
+                              >
+                                {subItem.submenu.map((child) => (
+                                  <Link
+                                    key={child.path}
+                                    to={child.path}
+                                    className={`block px-4 py-3 text-sm font-primary transition-all duration-200 ${
+                                      isActive(child.path)
+                                        ? 'bg-secondary/10 text-secondary font-semibold'
+                                        : 'text-primary hover:bg-secondary/5 hover:text-secondary'
+                                    }`}
+                                  >
+                                    {child.label}
+                                  </Link>
+                                ))}
+                              </div>
+                            )}
+                          </div>
                         ))}
                       </div>
                     </>
@@ -319,20 +380,69 @@ const Navbar = () => {
                           : 'max-h-0 overflow-hidden'
                       }`}
                     >
-                      {item.submenu.map((subItem) => (
-                        <Link
-                          key={subItem.path}
-                          to={subItem.path}
-                          onClick={closeMenu}
-                          className={`block py-3 pl-6 text-base font-primary rounded-lg transition-all duration-200 ${
-                            isActive(subItem.path)
-                              ? 'bg-secondary/20 text-secondary font-semibold'
-                              : 'text-white/80 hover:bg-white/5 hover:text-white'
-                          }`}
-                        >
-                          {subItem.label}
-                        </Link>
-                      ))}
+                      {item.submenu.map((subItem) =>
+                        subItem.submenu ? (
+                          <div key={subItem.path}>
+                            <div className="flex items-center justify-between">
+                              <Link
+                                to={subItem.path}
+                                onClick={closeMenu}
+                                className={`flex-1 block py-3 pl-6 text-base font-primary rounded-lg transition-all duration-200 ${
+                                  isActive(subItem.path)
+                                    ? 'bg-secondary/20 text-secondary font-semibold'
+                                    : 'text-white/80 hover:bg-white/5 hover:text-white'
+                                }`}
+                              >
+                                {subItem.label}
+                              </Link>
+                              <button
+                                onClick={() => toggleNestedMenu(subItem.path)}
+                                className="text-secondary p-2"
+                                aria-label={`Toggle ${subItem.label} menu`}
+                              >
+                                <FaChevronDown
+                                  className={`w-3.5 h-3.5 transition-transform duration-300 ${
+                                    openNestedMenu === subItem.path ? 'rotate-180' : ''
+                                  }`}
+                                />
+                              </button>
+                            </div>
+                            <div
+                              className={`transition-all duration-300 overflow-hidden ${
+                                openNestedMenu === subItem.path ? 'max-h-96' : 'max-h-0'
+                              }`}
+                            >
+                              {subItem.submenu.map((child) => (
+                                <Link
+                                  key={child.path}
+                                  to={child.path}
+                                  onClick={closeMenu}
+                                  className={`block py-2.5 pl-12 text-sm font-primary rounded-lg transition-all duration-200 ${
+                                    isActive(child.path)
+                                      ? 'bg-secondary/20 text-secondary font-semibold'
+                                      : 'text-white/70 hover:bg-white/5 hover:text-white'
+                                  }`}
+                                >
+                                  {child.label}
+                                </Link>
+                              ))}
+                            </div>
+                          </div>
+                        ) : (
+                          <Link
+                            key={subItem.path}
+                            to={subItem.path}
+                            onClick={closeMenu}
+                            className={`block py-3 pl-6 text-base font-primary rounded-lg transition-all duration-200 ${
+                              isActive(subItem.path)
+                                ? 'bg-secondary/20 text-secondary font-semibold'
+                                : 'text-white/80 hover:bg-white/5 hover:text-white'
+                            }`}
+                          >
+                            {subItem.label}
+                          </Link>
+                        )
+                      )}
                     </div>
                   </>
                 ) : (
