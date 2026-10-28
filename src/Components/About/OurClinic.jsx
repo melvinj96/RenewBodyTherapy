@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import TitleBand from '../Titleband';
+import PortraitVideo from '../Shared/PortraitVideo';
 
 const phoneDisplay = '07401 261289';
 const phoneTel = '07401261289';
@@ -259,28 +260,36 @@ function OurClinic() {
 
           <section className="mb-16">
             <SectionTitle>What To Expect When You Visit Our Clinic</SectionTitle>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {visitSteps.map((step, idx) => (
-                <div
-                  key={idx}
-                  className="bg-white rounded-xl p-6 sm:p-8 shadow-md border border-gray-100 border-l-4 border-secondary hover:shadow-lg transition-shadow duration-300"
-                >
-                  <h3 className="text-xl font-tertiary font-bold text-primary mb-3">
-                    {step.title}
-                  </h3>
-                  <p className="text-gray-700 leading-relaxed">{step.description}</p>
-                  {step.link && (
-                    <p className="mt-4">
-                      <Link
-                        to={step.link.to}
-                        className="text-secondary hover:text-secondary-dark font-semibold text-sm sm:text-base hover:underline"
-                      >
-                        {step.link.label} →
-                      </Link>
-                    </p>
-                  )}
-                </div>
-              ))}
+            <div className="grid grid-cols-1 lg:grid-cols-[350px_1fr] gap-8 lg:gap-12 items-center">
+              <div className="flex justify-center">
+                <PortraitVideo
+                  publicId="v1793220417/RBT_Consultation_Process_V1_wsbpz5"
+                  title="Renew Body Therapy consultation process"
+                />
+              </div>
+              <div className="space-y-4">
+                {visitSteps.map((step, idx) => (
+                  <div
+                    key={idx}
+                    className="bg-white rounded-xl p-6 shadow-md border border-gray-100 border-l-4 border-secondary hover:shadow-lg transition-shadow duration-300"
+                  >
+                    <h3 className="text-xl font-tertiary font-bold text-primary mb-3">
+                      {step.title}
+                    </h3>
+                    <p className="text-gray-700 leading-relaxed">{step.description}</p>
+                    {step.link && (
+                      <p className="mt-4">
+                        <Link
+                          to={step.link.to}
+                          className="text-secondary hover:text-secondary-dark font-semibold text-sm sm:text-base hover:underline"
+                        >
+                          {step.link.label} →
+                        </Link>
+                      </p>
+                    )}
+                  </div>
+                ))}
+              </div>
             </div>
           </section>
 

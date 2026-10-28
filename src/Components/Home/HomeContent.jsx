@@ -1,41 +1,9 @@
-import React, { useRef, useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import GoogleMapComponent from '../Shared/GoogleMapComponent';
+import PortraitVideo from '../Shared/PortraitVideo';
 
 const HomeContent = () => {
-  const videoRef = useRef(null);
-
-  useEffect(() => {
-    const video = videoRef.current;
-    if (!video) return;
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            // Video is in view, play it
-            video.play().catch((error) => {
-              // Handle autoplay restrictions
-              console.log('Autoplay prevented:', error);
-            });
-          } else {
-            // Video is out of view, pause it
-            video.pause();
-          }
-        });
-      },
-      {
-        threshold: 0.5, // Trigger when 50% of video is visible
-      }
-    );
-
-    observer.observe(video);
-
-    return () => {
-      observer.disconnect();
-    };
-  }, []);
-
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
       {/* Hero Section */}
@@ -74,21 +42,11 @@ const HomeContent = () => {
               </div>
             </div>
             <div className="flex justify-center">
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                <video
-                  ref={videoRef}
-                  src="https://res.cloudinary.com/diydpxavd/video/upload/v1764974111/video_al2iwc.mp4"
-                  poster="https://res.cloudinary.com/diydpxavd/image/upload/v1749591797/studio_rozdo6.jpg"
-                  playsInline
-                  controls
-                  controlsList="nodownload nofullscreen noremoteplayback"
-                  loop
-                  muted
-                  onContextMenu={(e) => e.preventDefault()}
-                  className="w-full max-w-[350px] aspect-[9/16] rounded-2xl cursor-pointer"
-                  title="Preview of Renew Body Therapy Clinic"
-                />
-              </div>
+              <PortraitVideo
+                publicId="v1793220421/RBT_Main_V1_t8xzbe"
+                title="Renew Body Therapy overview"
+                autoPlayInView
+              />
             </div>
           </div>
         </div>
@@ -167,10 +125,9 @@ const HomeContent = () => {
                 </a>
               </div>
               <div className="flex justify-center">
-                <img 
-                  src="https://res.cloudinary.com/diydpxavd/image/upload/v1762856584/massage_therapists-dudley-2025-drk_wnwhdz.svg" 
-                  alt="Massage Therapists Dudley 2025"
-                  className="max-w-[400px] w-full h-auto object-contain"
+                <PortraitVideo
+                  publicId="v1793220407/RBT_What_Makes_Me_Different_V1_orpdlg"
+                  title="Why choose Renew Body Therapy"
                 />
               </div>
             </div>
